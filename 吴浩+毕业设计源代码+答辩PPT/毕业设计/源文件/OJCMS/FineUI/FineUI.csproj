@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F8BF1F6-DDC2-43DA-BB0B-416CC287AC1B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FineUI</RootNamespace>
+    <AssemblyName>FineUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/FineUI/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OJCMS\lib\FineUI\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Release\FineUI.xml</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>StrongName.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseWebControls\BoxComponent.Container.PanelBase.CollapsablePanel.FormBase\FormBase.cs" />
+    <Compile Include="BaseWebControls\BoxComponent.Container.PanelBase.CollapsablePanel\CollapsablePanel.cs" />
+    <Compile Include="BaseWebControls\BoxComponent.Container.PanelBase\PanelBase.cs" />
+    <Compile Include="BaseWebControls\BoxComponent.Container\Container.cs" />
+    <Compile Include="BaseWebControls\BoxComponent.Field.TextField.RealTextField\RealTextField.cs" />
+    <Compile Include="BaseWebControls\BoxComponent.Field.TextField\TextField.cs" />
+    <Compile Include="BaseWebControls\ControlBase\Listener\Listener.cs" />
+    <Compile Include="BaseWebControls\ControlBase\Listener\ListenerCollection.cs" />
+    <Compile Include="Business\Enums\ButtonType.cs" />
+    <Compile Include="Business\Enums\Grid\FieldType.cs" />
+    <Compile Include="Business\Enums\Grid\Renderer.cs" />
+    <Compile Include="Business\Enums\MessageTarget.cs" />
+    <Compile Include="Business\Enums\SummaryPosition.cs" />
+    <Compile Include="Business\Enums\ToolbarAlign.cs" />
+    <Compile Include="Business\Util\FState.cs" />
+    <Compile Include="Business\Util\DateUtil.cs" />
+    <Compile Include="WebControls\ControlBase.CPHConnector\CPHConnector.cs" />
+    <Compile Include="WebControls\ControlBase.PageManager\CustomEventArgs.cs" />
+    <Compile Include="WebControls\Field.CheckBox\EventArgs\CheckedEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\EventArgs\TreeNodeEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\EventArgs\TreePreNodeEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\Editor\GridColumnEditorCollection.cs" />
+    <Compile Include="BaseWebControls\BoxComponent.Field\Field.cs" />
+    <Compile Include="BaseWebControls\ControlBase.Component.BoxComponent\BoxComponent.cs" />
+    <Compile Include="BaseWebControls\ControlBase.Component\Component.cs" />
+    <Compile Include="BaseWebControls\ControlBase\ControlBase.cs" />
+    <Compile Include="BaseWebControls\ControlBase\ControlBaseCollection.cs" />
+    <Compile Include="Business\ControlBuilder\NotAllowWhitespaceLiteralsBuilder.cs" />
+    <Compile Include="BaseWebControls\ControlBase\BaseCollection.cs" />
+    <Compile Include="Business\ControlBuilder\ContentPanelBuilder.cs" />
+    <Compile Include="Business\Config\GlobalConfig.cs" />
+    <Compile Include="Business\Editor\ControlBaseItemsEditor.cs" />
+    <Compile Include="Business\Editor\MenuItemsEditor.cs" />
+    <Compile Include="Business\Editor\ToolbarItemsEditor.cs" />
+    <Compile Include="Business\Editor\GridColumnEditorEditor.cs" />
+    <Compile Include="Business\Enums\CompareType.cs" />
+    <Compile Include="Business\Enums\HideMode.cs" />
+    <Compile Include="Business\Enums\Icon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Enums\IconHelper.cs" />
+    <Compile Include="Business\Enums\Theme.cs" />
+    <Compile Include="Business\Enums\Language.cs" />
+    <Compile Include="Business\Enums\Operator.cs" />
+    <Compile Include="Business\Enums\TriggerIcon.cs" />
+    <Compile Include="Business\Enums\WindowPosition.cs" />
+    <Compile Include="Business\Enums\ToolbarPosition.cs" />
+    <Compile Include="Business\Enums\Target.cs" />
+    <Compile Include="Business\Enums\RegexPattern.cs" />
+    <Compile Include="Business\Enums\CloseAction.cs" />
+    <Compile Include="Business\Enums\Position.cs" />
+    <Compile Include="Business\Enums\TabPosition.cs" />
+    <Compile Include="Business\Enums\IconAlign.cs" />
+    <Compile Include="Business\Enums\ButtonSize.cs" />
+    <Compile Include="Business\Enums\BoxLayoutAlign.cs" />
+    <Compile Include="Business\Enums\BoxLayoutPosition.cs" />
+    <Compile Include="Business\Enums\AjaxLoadingType.cs" />
+    <Compile Include="Business\Enums\TextAlign.cs" />
+    <Compile Include="Business\Enums\LabelAlign.cs" />
+    <Compile Include="Business\Enums\VerticalAlign.cs" />
+    <Compile Include="Business\JsHelper\JsArrayBuilder.cs" />
+    <Compile Include="Business\JsHelper\OptionBuilder.cs" />
+    <Compile Include="Business\ResourceManager\ClientJavascriptIDManager.cs" />
+    <Compile Include="Business\ResourceManager\CommonResourceHelper.cs" />
+    <Compile Include="Business\ResourceManager\ResourceHandler.cs" />
+    <Compile Include="Business\ResourceManager\ResponseFilter.cs" />
+    <Compile Include="Business\ResourceManager\ScriptModule.cs" />
+    <Compile Include="Business\ResourceManager\TreeNodeIDManager.cs" />
+    <Compile Include="Business\SimulateTree\SimulateTreeHeper.cs" />
+    <Compile Include="Business\SimulateTree\SimulateTreeNode.cs" />
+    <Compile Include="Business\Util\ControlUtil.cs" />
+    <Compile Include="Business\Util\StringUtil.cs" />
+    <Compile Include="Business\Util\ObjectUtil.cs" />
+    <Compile Include="Business\Util\HtmlNodeBuilder.cs" />
+    <Compile Include="Business\Util\StyleUtil.cs" />
+    <Compile Include="Business\Util\JSONUtil.cs" />
+    <Compile Include="lib\HtmlAgilityPack\crc32.cs" />
+    <Compile Include="lib\HtmlAgilityPack\EncodingFoundException.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlAttribute.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlAttributeCollection.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlCmdLine.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlCommentNode.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlConsoleListener.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlDocument.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlElementFlag.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlEntity.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlNameTable.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlNode.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlNodeCollection.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlNodeNavigator.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlNodeType.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlParseError.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlParseErrorCode.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlTextNode.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlWeb.cs" />
+    <Compile Include="lib\HtmlAgilityPack\HtmlWebException.cs" />
+    <Compile Include="lib\HtmlAgilityPack\IOLibrary.cs" />
+    <Compile Include="lib\HtmlAgilityPack\MixedCodeDocument.cs" />
+    <Compile Include="lib\HtmlAgilityPack\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="lib\HtmlAgilityPack\MixedCodeDocumentFragment.cs" />
+    <Compile Include="lib\HtmlAgilityPack\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="lib\HtmlAgilityPack\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="lib\HtmlAgilityPack\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="lib\HtmlAgilityPack\NameValuePair.cs" />
+    <Compile Include="lib\HtmlAgilityPack\NameValuePairList.cs" />
+    <Compile Include="lib\JSBeautifyLib\JSBeautify.cs" />
+    <Compile Include="WebControls\BoxComponent.Toolbar\ToolbarCollection.cs" />
+    <Compile Include="WebControls\Component.Menu\MenuItem\MenuCheckBox.cs" />
+    <Compile Include="WebControls\ControlBase.Timer\Timer.cs" />
+    <Compile Include="BaseWebControls\BoxComponent.Field\TooltipField.cs" />
+    <Compile Include="WebControls\ControlBase.UserControlConnector\UserControlConnector.cs" />
+    <Compile Include="WebControls\Field.RadioButtonList\RadioItem\RadioItem.cs" />
+    <Compile Include="WebControls\Field.RadioButtonList\RadioItem\RadioItemCollection.cs" />
+    <Compile Include="StaticClass\Confirm.cs" />
+    <Compile Include="StaticClass\ActiveWindow.cs" />
+    <Compile Include="WebControls\Component.Menu\MenuItem\MenuItem.cs" />
+    <Compile Include="WebControls\Component.Menu\MenuItem\MenuButton.cs" />
+    <Compile Include="WebControls\Component.Menu\MenuItem\MenuText.cs" />
+    <Compile Include="WebControls\Component.Menu\MenuItem\MenuSeparator.cs" />
+    <Compile Include="WebControls\Component.Menu\MenuItem\MenuHyperLink.cs" />
+    <Compile Include="WebControls\Component.Menu\MenuItem\MenuItemCollection.cs" />
+    <Compile Include="WebControls\Component.Menu\MenuItem\BaseMenuItem.cs" />
+    <Compile Include="WebControls\Component.SplitButton\SplitButton.cs" />
+    <Compile Include="WebControls\Component.Menu\Menu.cs" />
+    <Compile Include="WebControls\ControlBase.PageManager\PageManager.cs" />
+    <Compile Include="WebControls\Field.Label.Image\Image.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.FileUpload\FileUpload.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.HiddenField\HiddenField.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.TwinTriggerBox\TwinTriggerBox.cs" />
+    <Compile Include="WebControls\Field.Label.LinkButton\LinkButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebControls\Field.RadioButtonList\RadioButtonList.cs" />
+    <Compile Include="WebControls\Field.RadioButton\RadioButton.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.TriggerBox\TriggerBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Editor\GridColumnsEditor.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\EventArgs\GridRowSelectEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\EventArgs\GridAfterEditEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\BaseField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\RenderField\RenderField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\RenderField\RenderCheckField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\RenderField\RenderBaseField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\RowNumberField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\GroupField.cs" />
+    <Compile Include="WebControls\PanelBase.RegionPanel\RegionPanel.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Accordion\Accordion.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Accordion\AccordionPane\AccordionPane.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Accordion\AccordionPane\AccordionPaneCollection.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\EventArgs\TreeCommandEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\EventArgs\TreeCheckEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\TreeNode\TreeNode.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\TreeNode\TreeNodeCollection.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\XmlAttributeMapping\XmlAttributeMapping.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\XmlAttributeMapping\XmlAttributeMappingCollection.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Window\EventArgs\WindowCloseEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\EventArgs\GridPreRowEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\EventArgs\GridPageEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\EventArgs\GridCommandEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\EventArgs\GridRowEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\EventArgs\GridRowClickEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\LinkButtonField.cs" />
+    <Compile Include="WebControls\PanelBase.RegionPanel\Region\Region.cs" />
+    <Compile Include="WebControls\PanelBase.RegionPanel\Region\RegionCollection.cs" />
+    <Compile Include="WebControls\Component.Calendar\Calendar.cs" />
+    <Compile Include="WebControls\BoxComponent.Toolbar\Toolbar.cs" />
+    <Compile Include="WebControls\BoxComponent.Toolbar\Component.ToolbarText\ToolbarText.cs" />
+    <Compile Include="WebControls\BoxComponent.Toolbar\Component.ToolbarSeparator\ToolbarSeparator.cs">
+    </Compile>
+    <Compile Include="WebControls\BoxComponent.Toolbar\Component.ToolbarFill\ToolbarFill.cs">
+    </Compile>
+    <Compile Include="WebControls\Field.Label.HyperLink\HyperLink.cs" />
+    <Compile Include="StaticClass\PageContext.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Tree\Tree.cs" />
+    <Compile Include="Business\ResourceManager\AbsoluteScriptBlock.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.ContentPanel\ContentPanel.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Form\Form.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Form\FormRow\FormRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Form\FormRow\FormRowCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.GroupPanel\GroupPanel.cs" />
+    <Compile Include="WebControls\Field.CheckBox\CheckBox.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.SimpleForm\SimpleForm.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Window\Window.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebControls\PanelBase.Grid\EventArgs\GridSortEventArgs.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\Grid.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\BoundField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\CheckBoxField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\WindowField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\ImageField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\TemplateField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\HyperLinkField.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\GridColumn\GridColumn.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridColumn\GridColumn\GridColumnCollection.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridRow\GridTemplateContainer.cs" />
+    <Compile Include="WebControls\PanelBase.Grid\GridRow\GridRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebControls\PanelBase.Grid\GridRow\GridRowCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebControls\Field.TextField.DropDownList\ListItem\ListItem.cs" />
+    <Compile Include="WebControls\Field.TextField.DropDownList\ListItem\ListItemCollection.cs" />
+    <Compile Include="WebControls\Field.TextField.DropDownList\DropDownList.cs" />
+    <Compile Include="WebControls\Field.Label\Label.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.TextArea\TextArea.cs" />
+    <Compile Include="WebControls\PanelBase.TabStrip\Tab\Tab.cs" />
+    <Compile Include="WebControls\PanelBase.TabStrip\TabStrip.cs" />
+    <Compile Include="WebControls\PanelBase.CollapsablePanel.Panel\Panel.cs" />
+    <Compile Include="WebControls\Field.HtmlEditor\HtmlEditor.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.DatePicker\DatePicker.cs" />
+    <Compile Include="WebControls\PanelBase.TabStrip\Tab\TabCollection.cs" />
+    <Compile Include="Business\ResourceManager\ScriptBlock.cs" />
+    <Compile Include="Business\Enums\Layout.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.NumberBox\NumberBox.cs" />
+    <Compile Include="Business\Enums\TextMode.cs" />
+    <Compile Include="Business\Enums\ToolTipType.cs" />
+    <Compile Include="Business\JsHelper\JsHelper.cs" />
+    <Compile Include="StaticClass\Alert.cs" />
+    <Compile Include="Business\Enums\MessageBoxIcon.cs" />
+    <Compile Include="WebControls\Component.Button\Button.cs" />
+    <Compile Include="Business\JsHelper\JsObjectBuilder.cs" />
+    <Compile Include="Business\ResourceManager\ResourceHelper.cs" />
+    <Compile Include="Business\Config\Constants.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.TextBox\TextBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Business\Config\ConfigSection.cs" />
+    <Compile Include="Business\ResourceManager\ResourceManager.cs" />
+    <Compile Include="WebControls\Field.CheckBoxList\CheckBoxList.cs" />
+    <Compile Include="WebControls\Field.CheckBoxList\CheckItem\CheckItem.cs" />
+    <Compile Include="WebControls\Field.CheckBoxList\CheckItem\CheckItemCollection.cs" />
+    <Compile Include="WebControls\Field.TextField.RealTextField.TimePicker\TimePicker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="release_history_en.txt" />
+    <EmbeddedResource Include="toolbox\Accordion.bmp" />
+    <EmbeddedResource Include="toolbox\Button.bmp" />
+    <EmbeddedResource Include="toolbox\Calendar.bmp" />
+    <EmbeddedResource Include="toolbox\CheckBox.bmp" />
+    <EmbeddedResource Include="toolbox\CheckBoxList.bmp" />
+    <EmbeddedResource Include="toolbox\ContentPanel.bmp" />
+    <EmbeddedResource Include="toolbox\DataList.bmp" />
+    <EmbeddedResource Include="toolbox\DatePicker.bmp" />
+    <EmbeddedResource Include="toolbox\DropDownList.bmp" />
+    <EmbeddedResource Include="toolbox\FileUpload.bmp" />
+    <EmbeddedResource Include="toolbox\Form.bmp" />
+    <EmbeddedResource Include="toolbox\Grid.bmp" />
+    <EmbeddedResource Include="toolbox\GroupPanel.bmp" />
+    <EmbeddedResource Include="toolbox\HiddenField.bmp" />
+    <EmbeddedResource Include="toolbox\HtmlEditor.bmp" />
+    <EmbeddedResource Include="toolbox\HyperLink.bmp" />
+    <EmbeddedResource Include="toolbox\Image.bmp" />
+    <EmbeddedResource Include="toolbox\ImageButton.bmp" />
+    <EmbeddedResource Include="toolbox\Label.bmp" />
+    <EmbeddedResource Include="toolbox\LinkButton.bmp" />
+    <EmbeddedResource Include="toolbox\ListBox.bmp" />
+    <EmbeddedResource Include="toolbox\Literal.bmp" />
+    <EmbeddedResource Include="toolbox\Menu.bmp" />
+    <EmbeddedResource Include="toolbox\MenuButton.bmp" />
+    <EmbeddedResource Include="toolbox\MenuCheckBox.bmp" />
+    <EmbeddedResource Include="toolbox\MenuHyperLink.bmp" />
+    <EmbeddedResource Include="toolbox\MenuSeparator.bmp" />
+    <EmbeddedResource Include="toolbox\MenuText.bmp" />
+    <EmbeddedResource Include="toolbox\NumberBox.bmp" />
+    <EmbeddedResource Include="toolbox\PageLoading.bmp" />
+    <EmbeddedResource Include="toolbox\PageManager.bmp" />
+    <EmbeddedResource Include="toolbox\Panel.bmp" />
+    <EmbeddedResource Include="toolbox\PlaceHolder.bmp" />
+    <EmbeddedResource Include="toolbox\RadioButton.bmp" />
+    <EmbeddedResource Include="toolbox\RadioButtonList.bmp" />
+    <EmbeddedResource Include="toolbox\RegionPanel.bmp" />
+    <EmbeddedResource Include="toolbox\SimpleForm.bmp" />
+    <EmbeddedResource Include="toolbox\SplitButton.bmp" />
+    <EmbeddedResource Include="toolbox\Table.bmp" />
+    <EmbeddedResource Include="toolbox\TabStrip.bmp" />
+    <EmbeddedResource Include="toolbox\TextArea.bmp" />
+    <EmbeddedResource Include="toolbox\TextBox.bmp" />
+    <EmbeddedResource Include="toolbox\TimePicker.bmp" />
+    <EmbeddedResource Include="toolbox\Toolbar.bmp" />
+    <EmbeddedResource Include="toolbox\ToolbarFill.bmp" />
+    <EmbeddedResource Include="toolbox\ToolbarSeparator.bmp" />
+    <EmbeddedResource Include="toolbox\ToolbarText.bmp" />
+    <EmbeddedResource Include="toolbox\Tree.bmp" />
+    <EmbeddedResource Include="toolbox\TriggerBox.bmp" />
+    <EmbeddedResource Include="toolbox\TwinTriggerBox.bmp" />
+    <EmbeddedResource Include="toolbox\UserControlConnector.bmp" />
+    <EmbeddedResource Include="toolbox\View.bmp" />
+    <EmbeddedResource Include="toolbox\Window.bmp" />
+    <None Include="StrongName.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="release_history.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

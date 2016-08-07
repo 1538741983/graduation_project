@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OJCMS.Domain" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OJCMS.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8739/OJCMSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfMenuDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MenuDO" nillable="true" type="tns:MenuDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenuDO" nillable="true" type="tns:ArrayOfMenuDO" />
+  <xs:complexType name="MenuDO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ds" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Fg_sys" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="Id_perent" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="InnerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NavigateUrl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Num" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Target" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MenuDO" nillable="true" type="tns:MenuDO" />
+  <xs:complexType name="ArrayOfUserDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserDO" nillable="true" type="tns:UserDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserDO" nillable="true" type="tns:ArrayOfUserDO" />
+  <xs:complexType name="UserDO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Age" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Ds" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pwd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserDO" nillable="true" type="tns:UserDO" />
+  <xs:complexType name="ArrayOfRoleDo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleDo" nillable="true" type="tns:RoleDo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleDo" nillable="true" type="tns:ArrayOfRoleDo" />
+  <xs:complexType name="RoleDo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoleDo" nillable="true" type="tns:RoleDo" />
+</xs:schema>

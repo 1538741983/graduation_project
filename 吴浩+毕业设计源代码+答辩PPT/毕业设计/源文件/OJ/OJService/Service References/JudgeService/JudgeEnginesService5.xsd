@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OJ.Domain" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OJ.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:20543/JudgeEnginesService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://localhost:20543/JudgeEnginesService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="SolutionDO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codeLenght" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="createTime" nillable="true" type="q2:DateTimeOffset" />
+          <xs:element minOccurs="0" name="id" type="xs:long" />
+          <xs:element minOccurs="0" name="id_contest" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id_language" type="xs:int" />
+          <xs:element minOccurs="0" name="id_problem" type="xs:long" />
+          <xs:element minOccurs="0" name="id_user" type="xs:long" />
+          <xs:element minOccurs="0" name="judgeTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="language" nillable="true" type="tns:LanguageDO" />
+          <xs:element minOccurs="0" name="languageReference" nillable="true" type="q1:EntityReferenceOfLanguageDOUWpDsVqM" />
+          <xs:element minOccurs="0" name="memory" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="num" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pass_rate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="sourcecode" nillable="true" type="tns:SourceCodeDO" />
+          <xs:element minOccurs="0" name="sourcecodeReference" nillable="true" type="q1:EntityReferenceOfSourceCodeDOUWpDsVqM" />
+          <xs:element minOccurs="0" name="time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="userIp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="valid" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SolutionDO" nillable="true" type="tns:SolutionDO" />
+  <xs:complexType name="LanguageDO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:int" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LanguageDO" nillable="true" type="tns:LanguageDO" />
+  <xs:complexType name="SourceCodeDO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id_solution" type="xs:long" />
+          <xs:element minOccurs="0" name="Source_code" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SourceCodeDO" nillable="true" type="tns:SourceCodeDO" />
+</xs:schema>

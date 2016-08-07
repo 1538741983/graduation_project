@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1cf6859e-faa3-428d-90ed-a0c466801476" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:20543/JudgeEnginesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JudgeEnginesService.xsd" MetadataType="Schema" ID="626d38f4-220b-437c-91c3-dd2c83c58cc2" SourceId="1" SourceUrl="http://localhost:20543/JudgeEnginesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="JudgeEnginesService.disco" MetadataType="Disco" ID="c599d99a-8017-4010-8628-5f5b387a1bc5" SourceId="1" SourceUrl="http://localhost:20543/JudgeEnginesService.svc?disco" />
+    <MetadataFile FileName="JudgeEnginesService.wsdl" MetadataType="Wsdl" ID="7f8bde24-2eb9-4ef0-bf7d-0dbddaf9797e" SourceId="1" SourceUrl="http://localhost:20543/JudgeEnginesService.svc?wsdl" />
+    <MetadataFile FileName="JudgeEnginesService1.xsd" MetadataType="Schema" ID="39bb83eb-a6ad-42eb-b22b-da44618a19be" SourceId="1" SourceUrl="http://localhost:20543/JudgeEnginesService.svc?xsd=xsd4" />
+    <MetadataFile FileName="JudgeEnginesService2.xsd" MetadataType="Schema" ID="58c5b89d-4ca9-42cb-b5a7-cb8fc3f84e05" SourceId="1" SourceUrl="http://localhost:20543/JudgeEnginesService.svc?xsd=xsd5" />
+    <MetadataFile FileName="JudgeEnginesService3.xsd" MetadataType="Schema" ID="bdc81dd4-1869-4b12-a554-62c2353752a1" SourceId="1" SourceUrl="http://localhost:20543/JudgeEnginesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="JudgeEnginesService4.xsd" MetadataType="Schema" ID="6f41387e-b8cb-48da-b8cb-0a64c77b1734" SourceId="1" SourceUrl="http://localhost:20543/JudgeEnginesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="JudgeEnginesService5.xsd" MetadataType="Schema" ID="79a13376-973d-4258-a907-9b964aeea9a1" SourceId="1" SourceUrl="http://localhost:20543/JudgeEnginesService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

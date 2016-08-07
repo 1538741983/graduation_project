@@ -1,0 +1,78 @@
+﻿@using OJ.OJService
+@model OJ.OJService.SolutionPageList
+@{
+    ViewBag.Title = "运行结果";
+}
+
+<!--Center-->
+<div class="col-sm-10">
+    <div class="text-center">
+        <ul class="pagination pagination-centered text-center" style="margin: 0">
+            <li class="previous">
+                @Html.ActionLink("上一页", "SolutionList", "Solution", new { id = Model.CurrentPage - 1 }, Model.CurrentPage == 1 ? new { onclick = "return false" } : null)
+            </li>
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li @(i == Model.CurrentPage ? "class = \"active\"" : "")>
+                    @Html.ActionLink(i.ToString(), "SolutionList", "Solution", new { id = i }, null)
+                </li>
+            }
+
+            <li class="next">
+                @Html.ActionLink("下一页", "SolutionList", "Solution", new { id = Model.CurrentPage + 1 }, Model.CurrentPage == Model.TotalPages ? new { onclick = "return false" } : null)
+            </li>
+        </ul>
+    </div>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th style="width: 50px">编号</th>
+                <th style="width: 50px">题号</th>
+                <th style="width: 50px">结果</th>
+                <th style="width: 50px">耗时</th>
+                <th style="width: 50px">内存</th>
+                <th style="width: 50px">语言</th>
+                <th style="width: 50px">长度</th>
+                <th style="width: 50px">时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.DataList != null)
+            {
+                foreach (SolutionDO solution in Model.DataList)
+                {
+                <tr>
+                    <td>@solution.id</td>
+                    <td>@solution.id_problem</td>
+                    <td>@solution.result</td>
+                    <td>@solution.time</td>
+                    <td>@solution.memory</td>
+                    <td>@solution.language.name</td>
+                    <td>@solution.codeLenght</td>
+                    <td>@(solution.createTime == null ? "" : solution.createTime.Value.ToString("yyyy-MM-dd HH:mm:ss"))</td>
+                </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <div class="text-center">
+        <ul class="pagination pagination-centered text-center">
+            <li class="previous">
+                @Html.ActionLink("上一页", "SolutionList", "Solution", new { id = Model.CurrentPage - 1 }, Model.CurrentPage == 1 ? new { onclick = "return false" } : null)
+            </li>
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li @(i == Model.CurrentPage ? "class = \"active\"" : "")>
+                    @Html.ActionLink(i.ToString(), "SolutionList", "Solution", new { id = i }, null)
+                </li>
+            }
+
+            <li class="next">
+                @Html.ActionLink("下一页", "SolutionList", "Solution", new { id = Model.CurrentPage + 1 }, Model.CurrentPage == Model.TotalPages ? new { onclick = "return false" } : null)
+            </li>
+        </ul>
+    </div>
+</div>

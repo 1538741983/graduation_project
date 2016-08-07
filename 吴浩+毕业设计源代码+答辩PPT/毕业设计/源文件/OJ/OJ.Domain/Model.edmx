@@ -1,0 +1,1317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="GPAssignment" EntityType="Model.Store.GPAssignment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Language" EntityType="Model.Store.Language" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Loginlog" EntityType="Model.Store.Loginlog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Permission" EntityType="Model.Store.Permission" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Problem" EntityType="Model.Store.Problem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Role" EntityType="Model.Store.Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RPAssignment" EntityType="Model.Store.RPAssignment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Solution" EntityType="Model.Store.Solution" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SourceCode" EntityType="Model.Store.SourceCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UGAssignment" EntityType="Model.Store.UGAssignment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UPAssignment" EntityType="Model.Store.UPAssignment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="URAssignment" EntityType="Model.Store.URAssignment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="Model.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserGroup" EntityType="Model.Store.UserGroup" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_GPAssignmentDOPermissionDO" Association="Model.Store.FK_GPAssignmentDOPermissionDO">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="GPAssignment" EntitySet="GPAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GPAssignmentDOUserGroupDO" Association="Model.Store.FK_GPAssignmentDOUserGroupDO">
+            <End Role="UserGroup" EntitySet="UserGroup" />
+            <End Role="GPAssignment" EntitySet="GPAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_languagesolution" Association="Model.Store.FK_languagesolution">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="Solution" EntitySet="Solution" />
+          </AssociationSet>
+          <AssociationSet Name="FK_languageuser" Association="Model.Store.FK_languageuser">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_problemsolution" Association="Model.Store.FK_problemsolution">
+            <End Role="Problem" EntitySet="Problem" />
+            <End Role="Solution" EntitySet="Solution" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RPAssignmentDOPermissionDO" Association="Model.Store.FK_RPAssignmentDOPermissionDO">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="RPAssignment" EntitySet="RPAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RPAssignmentDORoleDo" Association="Model.Store.FK_RPAssignmentDORoleDo">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="RPAssignment" EntitySet="RPAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_solutionsourceCode" Association="Model.Store.FK_solutionsourceCode">
+            <End Role="Solution" EntitySet="Solution" />
+            <End Role="SourceCode" EntitySet="SourceCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UGAssignmentDOUser" Association="Model.Store.FK_UGAssignmentDOUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="UGAssignment" EntitySet="UGAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UGAssignmentDOUserGroupDO" Association="Model.Store.FK_UGAssignmentDOUserGroupDO">
+            <End Role="UserGroup" EntitySet="UserGroup" />
+            <End Role="UGAssignment" EntitySet="UGAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UPAssignmentDOPermissionDO" Association="Model.Store.FK_UPAssignmentDOPermissionDO">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="UPAssignment" EntitySet="UPAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_URAssignmentDORoleDo" Association="Model.Store.FK_URAssignmentDORoleDo">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="URAssignment" EntitySet="URAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_URAssignmentDOUser" Association="Model.Store.FK_URAssignmentDOUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="URAssignment" EntitySet="URAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_userloginlog" Association="Model.Store.FK_userloginlog">
+            <End Role="User" EntitySet="User" />
+            <End Role="Loginlog" EntitySet="Loginlog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usersolution" Association="Model.Store.FK_usersolution">
+            <End Role="User" EntitySet="User" />
+            <End Role="Solution" EntitySet="Solution" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserUPAssignmentDO" Association="Model.Store.FK_UserUPAssignmentDO">
+            <End Role="User" EntitySet="User" />
+            <End Role="UPAssignment" EntitySet="UPAssignment" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GPAssignment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id_UserGroup" Type="bigint" Nullable="false" />
+          <Property Name="Id_Permission" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Loginlog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_user" Type="bigint" Nullable="false" />
+          <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ip" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="logintime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Problem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Describe" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Input" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Output" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Sample_input" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Sample_output" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Fg_special" Type="nvarchar(max)" />
+          <Property Name="Hint" Type="nvarchar(max)" />
+          <Property Name="Source" Type="nvarchar(max)" />
+          <Property Name="In_date" Type="datetime" Nullable="false" />
+          <Property Name="Time_limit" Type="int" Nullable="false" />
+          <Property Name="Memory_limit" Type="int" Nullable="false" />
+          <Property Name="Defunct" Type="bit" Nullable="false" />
+          <Property Name="Accepted" Type="bigint" />
+          <Property Name="Submit" Type="bigint" />
+          <Property Name="Solved" Type="int" />
+          <Property Name="Difficulty" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Uploader" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RPAssignment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Role" Type="bigint" Nullable="false" />
+          <Property Name="Id_Per" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Solution">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_problem" Type="bigint" Nullable="false" />
+          <Property Name="id_user" Type="bigint" Nullable="false" />
+          <Property Name="time" Type="int" />
+          <Property Name="memory" Type="int" />
+          <Property Name="createTime" Type="datetimeoffset" />
+          <Property Name="result" Type="nvarchar(max)" />
+          <Property Name="id_language" Type="int" Nullable="false" />
+          <Property Name="userIp" Type="nvarchar(max)" />
+          <Property Name="codeLenght" Type="nvarchar(max)" />
+          <Property Name="judgeTime" Type="datetime" />
+          <Property Name="pass_rate" Type="nvarchar(max)" />
+          <Property Name="id_contest" Type="nvarchar(max)" />
+          <Property Name="valid" Type="bit" />
+          <Property Name="num" Type="int" />
+        </EntityType>
+        <EntityType Name="SourceCode">
+          <Key>
+            <PropertyRef Name="Id_solution" />
+          </Key>
+          <Property Name="Id_solution" Type="bigint" Nullable="false" />
+          <Property Name="Source_code" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UGAssignment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id_User" Type="bigint" Nullable="false" />
+          <Property Name="Id_UserGroup" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UPAssignment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id_User" Type="bigint" Nullable="false" />
+          <Property Name="Id_Permission" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="URAssignment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id_User" Type="bigint" Nullable="false" />
+          <Property Name="Id_Role" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Submit" Type="bigint" />
+          <Property Name="Solved" Type="bigint" />
+          <Property Name="RegTime" Type="datetime" />
+          <Property Name="AccessTime" Type="datetime" />
+          <Property Name="RegIp" Type="nvarchar(max)" />
+          <Property Name="AccessIp" Type="nvarchar(max)" />
+          <Property Name="Defunct" Type="bit" />
+          <Property Name="School" Type="nvarchar(max)" />
+          <Property Name="Id_language" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Address" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="UserGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_GPAssignmentDOPermissionDO">
+          <End Role="Permission" Type="Model.Store.Permission" Multiplicity="1" />
+          <End Role="GPAssignment" Type="Model.Store.GPAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="GPAssignment">
+              <PropertyRef Name="Id_Permission" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GPAssignmentDOUserGroupDO">
+          <End Role="UserGroup" Type="Model.Store.UserGroup" Multiplicity="1" />
+          <End Role="GPAssignment" Type="Model.Store.GPAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GPAssignment">
+              <PropertyRef Name="Id_UserGroup" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_languagesolution">
+          <End Role="Language" Type="Model.Store.Language" Multiplicity="1" />
+          <End Role="Solution" Type="Model.Store.Solution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Solution">
+              <PropertyRef Name="id_language" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_languageuser">
+          <End Role="Language" Type="Model.Store.Language" Multiplicity="1" />
+          <End Role="User" Type="Model.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Id_language" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_problemsolution">
+          <End Role="Problem" Type="Model.Store.Problem" Multiplicity="1" />
+          <End Role="Solution" Type="Model.Store.Solution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problem">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Solution">
+              <PropertyRef Name="id_problem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RPAssignmentDOPermissionDO">
+          <End Role="Permission" Type="Model.Store.Permission" Multiplicity="1" />
+          <End Role="RPAssignment" Type="Model.Store.RPAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="RPAssignment">
+              <PropertyRef Name="Id_Per" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RPAssignmentDORoleDo">
+          <End Role="Role" Type="Model.Store.Role" Multiplicity="1" />
+          <End Role="RPAssignment" Type="Model.Store.RPAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RPAssignment">
+              <PropertyRef Name="Id_Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_solutionsourceCode">
+          <End Role="Solution" Type="Model.Store.Solution" Multiplicity="1" />
+          <End Role="SourceCode" Type="Model.Store.SourceCode" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Solution">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="SourceCode">
+              <PropertyRef Name="Id_solution" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UGAssignmentDOUser">
+          <End Role="User" Type="Model.Store.User" Multiplicity="1" />
+          <End Role="UGAssignment" Type="Model.Store.UGAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UGAssignment">
+              <PropertyRef Name="Id_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UGAssignmentDOUserGroupDO">
+          <End Role="UserGroup" Type="Model.Store.UserGroup" Multiplicity="1" />
+          <End Role="UGAssignment" Type="Model.Store.UGAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UGAssignment">
+              <PropertyRef Name="Id_UserGroup" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UPAssignmentDOPermissionDO">
+          <End Role="Permission" Type="Model.Store.Permission" Multiplicity="1" />
+          <End Role="UPAssignment" Type="Model.Store.UPAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UPAssignment">
+              <PropertyRef Name="Id_Permission" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_URAssignmentDORoleDo">
+          <End Role="Role" Type="Model.Store.Role" Multiplicity="1" />
+          <End Role="URAssignment" Type="Model.Store.URAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="URAssignment">
+              <PropertyRef Name="Id_Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_URAssignmentDOUser">
+          <End Role="User" Type="Model.Store.User" Multiplicity="1" />
+          <End Role="URAssignment" Type="Model.Store.URAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="URAssignment">
+              <PropertyRef Name="Id_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_userloginlog">
+          <End Role="User" Type="Model.Store.User" Multiplicity="1" />
+          <End Role="Loginlog" Type="Model.Store.Loginlog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Loginlog">
+              <PropertyRef Name="id_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usersolution">
+          <End Role="User" Type="Model.Store.User" Multiplicity="1" />
+          <End Role="Solution" Type="Model.Store.Solution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Solution">
+              <PropertyRef Name="id_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserUPAssignmentDO">
+          <End Role="User" Type="Model.Store.User" Multiplicity="1" />
+          <End Role="UPAssignment" Type="Model.Store.UPAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UPAssignment">
+              <PropertyRef Name="Id_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" >
+        <EntityContainer Name="ModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Problem" EntityType="Model.ProblemDO" />
+          <EntitySet Name="Solution" EntityType="Model.SolutionDO" />
+          <AssociationSet Name="problemsolution" Association="Model.problemsolution">
+            <End Role="problem" EntitySet="Problem" />
+            <End Role="solution" EntitySet="Solution" />
+          </AssociationSet>
+          <EntitySet Name="SourceCode" EntityType="Model.SourceCodeDO" />
+          <AssociationSet Name="solutionsourceCode" Association="Model.solutionsourceCode">
+            <End Role="solution" EntitySet="Solution" />
+            <End Role="sourceCode" EntitySet="SourceCode" />
+          </AssociationSet>
+          <EntitySet Name="User" EntityType="Model.UserDO" />
+          <AssociationSet Name="usersolution" Association="Model.usersolution">
+            <End Role="user" EntitySet="User" />
+            <End Role="solution" EntitySet="Solution" />
+          </AssociationSet>
+          <EntitySet Name="Language" EntityType="Model.LanguageDO" />
+          <AssociationSet Name="languageuser" Association="Model.languageuser">
+            <End Role="language" EntitySet="Language" />
+            <End Role="user" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="languagesolution" Association="Model.languagesolution">
+            <End Role="language" EntitySet="Language" />
+            <End Role="solution" EntitySet="Solution" />
+          </AssociationSet>
+          <EntitySet Name="Loginlog" EntityType="Model.LoginlogDO" />
+          <AssociationSet Name="userloginlog" Association="Model.userloginlog">
+            <End Role="user" EntitySet="User" />
+            <End Role="loginlog" EntitySet="Loginlog" />
+          </AssociationSet>
+          <EntitySet Name="UserGroup" EntityType="Model.UserGroupDO" />
+          <EntitySet Name="Role" EntityType="Model.RoleDo" />
+          <EntitySet Name="Permission" EntityType="Model.PermissionDO" />
+          <EntitySet Name="RPAssignment" EntityType="Model.RPAssignmentDO" />
+          <EntitySet Name="URAssignment" EntityType="Model.URAssignmentDO" />
+          <EntitySet Name="UGAssignment" EntityType="Model.UGAssignmentDO" />
+          <EntitySet Name="GPAssignment" EntityType="Model.GPAssignmentDO" />
+          <EntitySet Name="UPAssignment" EntityType="Model.UPAssignmentDO" />
+          <AssociationSet Name="UGAssignmentDOUserGroupDO" Association="Model.UGAssignmentDOUserGroupDO">
+            <End Role="UGAssignmentDO" EntitySet="UGAssignment" />
+            <End Role="UserGroupDO" EntitySet="UserGroup" />
+          </AssociationSet>
+          <AssociationSet Name="GPAssignmentDOUserGroupDO" Association="Model.GPAssignmentDOUserGroupDO">
+            <End Role="GPAssignmentDO" EntitySet="GPAssignment" />
+            <End Role="UserGroupDO" EntitySet="UserGroup" />
+          </AssociationSet>
+          <AssociationSet Name="RPAssignmentDORoleDo" Association="Model.RPAssignmentDORoleDo">
+            <End Role="RPAssignmentDO" EntitySet="RPAssignment" />
+            <End Role="RoleDo" EntitySet="Role" />
+          </AssociationSet>
+          <AssociationSet Name="URAssignmentDORoleDo" Association="Model.URAssignmentDORoleDo">
+            <End Role="URAssignmentDO" EntitySet="URAssignment" />
+            <End Role="RoleDo" EntitySet="Role" />
+          </AssociationSet>
+          <AssociationSet Name="RPAssignmentDOPermissionDO" Association="Model.RPAssignmentDOPermissionDO">
+            <End Role="RPAssignmentDO" EntitySet="RPAssignment" />
+            <End Role="PermissionDO1" EntitySet="Permission" />
+          </AssociationSet>
+          <AssociationSet Name="GPAssignmentDOPermissionDO" Association="Model.GPAssignmentDOPermissionDO">
+            <End Role="GPAssignmentDO" EntitySet="GPAssignment" />
+            <End Role="PermissionDO1" EntitySet="Permission" />
+          </AssociationSet>
+          <AssociationSet Name="UPAssignmentDOPermissionDO" Association="Model.UPAssignmentDOPermissionDO">
+            <End Role="UPAssignmentDO" EntitySet="UPAssignment" />
+            <End Role="PermissionDO1" EntitySet="Permission" />
+          </AssociationSet>
+          <AssociationSet Name="UserUPAssignmentDO" Association="Model.UserUPAssignmentDO">
+            <End Role="UPAssignmentDO" EntitySet="UPAssignment" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="UGAssignmentDOUser" Association="Model.UGAssignmentDOUser">
+            <End Role="UGAssignmentDO" EntitySet="UGAssignment" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="URAssignmentDOUser" Association="Model.URAssignmentDOUser">
+            <End Role="URAssignmentDO" EntitySet="URAssignment" />
+            <End Role="UserDO" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ProblemDO">
+          <Documentation>
+            <Summary>题目表</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+            <Documentation>
+              <Summary>题目ID（主键）</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>标题</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Describe" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>描述</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Input" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>输入说明</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Output" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>输出说明</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Sample_input" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>样例输入</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Sample_output" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>样例输出</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Fg_special" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>是否为特别题目</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Hint" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>提示</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Source" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>来源</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="DateTime" Name="In_date" Nullable="false" Precision="3" >
+            <Documentation>
+              <Summary>加入时间</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int32" Name="Time_limit" Nullable="false" >
+            <Documentation>
+              <Summary>限时（秒）</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int32" Name="Memory_limit" Nullable="false" >
+            <Documentation>
+              <Summary>空间限制（MByte）</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Boolean" Name="Defunct" Nullable="false" DefaultValue="false" >
+            <Documentation>
+              <Summary>是否屏蔽</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int64" Name="Accepted" Nullable="true" >
+            <Documentation>
+              <Summary>总AC次数</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int64" Name="Submit" Nullable="true" >
+            <Documentation>
+              <Summary>总提交次数</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int32" Name="Solved" Nullable="true" >
+            <Documentation>
+              <Summary>通过（计算字段）</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Difficulty" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>难度</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int64" Name="Uploader" Nullable="false" >
+            <Documentation>
+              <Summary>上传者</Summary>
+              <LongDescription>上传者</LongDescription>
+            </Documentation>
+          </Property>
+        </EntityType>
+        <EntityType Name="SolutionDO">
+          <Documentation>
+            <Summary>程序运行结果记录</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+            <Documentation>
+              <Summary>运行ID（主键）</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int64" Name="id_problem" Nullable="false" >
+            <Documentation>
+              <Summary>题目ID</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int64" Name="id_user" Nullable="false" >
+            <Documentation>
+              <Summary>用户ID</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int32" Name="time" Nullable="true" >
+            <Documentation>
+              <Summary>用时（秒）</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int32" Name="memory" Nullable="true" >
+            <Documentation>
+              <Summary>所用空间（MByte）</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="DateTimeOffset" Name="createTime" Nullable="true" Precision="7" >
+            <Documentation>
+              <Summary>创建时间</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="result" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>结果</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int32" Name="id_language" Nullable="false" >
+            <Documentation>
+              <Summary>语言</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="userIp" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>用户IP</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="codeLenght" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>代码长度</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="DateTime" Name="judgeTime" Nullable="true" Precision="3" >
+            <Documentation>
+              <Summary>判题时间</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="pass_rate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>通过百分比（OI模式下可用）</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="id_contest" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>所属于竞赛组</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Boolean" Name="valid" Nullable="true" >
+            <Documentation>
+              <Summary>是否有效</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int32" Name="num" Nullable="true" >
+            <Documentation>
+              <Summary>题目在竞赛中的序号</Summary>
+            </Documentation>
+          </Property>
+          <NavigationProperty Name="sourcecode" Relationship="Model.solutionsourceCode" FromRole="solution" ToRole="sourceCode" />
+          <NavigationProperty Name="language" Relationship="Model.languagesolution" FromRole="solution" ToRole="language" />
+        </EntityType>
+        <Association Name="problemsolution">
+          <End Type="Model.ProblemDO" Role="problem" Multiplicity="1" />
+          <End Type="Model.SolutionDO" Role="solution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="problem">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="solution">
+              <PropertyRef Name="id_problem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SourceCodeDO">
+          <Documentation>
+            <Summary>源代码表</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="Id_solution" />
+          </Key>
+          <Property Type="Int64" Name="Id_solution" Nullable="false" >
+            <Documentation>
+              <Summary>运行ID</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Source_code" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>源代码</Summary>
+            </Documentation>
+          </Property>
+        </EntityType>
+        <Association Name="solutionsourceCode">
+          <End Type="Model.SolutionDO" Role="solution" Multiplicity="1" />
+          <End Type="Model.SourceCodeDO" Role="sourceCode" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="solution">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="sourceCode">
+              <PropertyRef Name="Id_solution" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UserDO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>昵称</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>密码</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>E-Mail</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int64" Name="Submit" Nullable="true" >
+            <Documentation>
+              <Summary>提交次数</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int64" Name="Solved" Nullable="true" >
+            <Documentation>
+              <Summary>成功次数</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="DateTime" Name="RegTime" Nullable="true" Precision="3" >
+            <Documentation>
+              <Summary>注册时间</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="DateTime" Name="AccessTime" Nullable="true" Precision="3" >
+            <Documentation>
+              <Summary>最后访问时间</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="RegIp" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>注册时Ip</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="AccessIp" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>最后一次登录IP</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Boolean" Name="Defunct" Nullable="true" >
+            <Documentation>
+              <Summary>是否屏蔽</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="School" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>学校</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="Int32" Name="Id_language" Nullable="false" >
+            <Documentation>
+              <Summary>默认使用语言</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Int32" Name="Age" Nullable="true" />
+          <Property Type="DateTime" Name="Birthday" Nullable="true" Precision="3" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="usersolution">
+          <End Type="Model.UserDO" Role="user" Multiplicity="1" />
+          <End Type="Model.SolutionDO" Role="solution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="solution">
+              <PropertyRef Name="id_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="LanguageDO">
+          <Documentation>
+            <Summary>语言</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" >
+            <Documentation>
+              <Summary>语言ID</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>语言名称</Summary>
+            </Documentation>
+          </Property>
+        </EntityType>
+        <Association Name="languageuser">
+          <End Type="Model.LanguageDO" Role="language" Multiplicity="1" />
+          <End Type="Model.UserDO" Role="user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="Id_language" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="languagesolution">
+          <End Type="Model.LanguageDO" Role="language" Multiplicity="1" />
+          <End Type="Model.SolutionDO" Role="solution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="solution">
+              <PropertyRef Name="id_language" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="LoginlogDO">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="id_user" Nullable="false" >
+            <Documentation>
+              <Summary>登录用户ID</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="password" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>登录密码</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="String" Name="ip" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" >
+            <Documentation>
+              <Summary>登陆IP</Summary>
+            </Documentation>
+          </Property>
+          <Property Type="DateTime" Name="logintime" Nullable="false" Precision="3" >
+            <Documentation>
+              <Summary>登录时间</Summary>
+            </Documentation>
+          </Property>
+        </EntityType>
+        <Association Name="userloginlog">
+          <End Type="Model.UserDO" Role="user" Multiplicity="1" />
+          <End Type="Model.LoginlogDO" Role="loginlog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="loginlog">
+              <PropertyRef Name="id_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UserGroupDO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="RoleDo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PermissionDO">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="code" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="RPAssignmentDO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="Id_Role" Nullable="false" />
+          <Property Type="Int64" Name="Id_Per" Nullable="false" />
+        </EntityType>
+        <EntityType Name="URAssignmentDO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="Id_User" Nullable="false" />
+          <Property Type="Int64" Name="Id_Role" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UGAssignmentDO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="Id_User" Nullable="false" />
+          <Property Type="Int64" Name="Id_UserGroup" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GPAssignmentDO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="Id_UserGroup" Nullable="false" />
+          <Property Type="Int64" Name="Id_Permission" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UPAssignmentDO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="Id_User" Nullable="false" />
+          <Property Type="Int64" Name="Id_Permission" Nullable="false" />
+        </EntityType>
+        <Association Name="UGAssignmentDOUserGroupDO">
+          <End Type="Model.UGAssignmentDO" Role="UGAssignmentDO" Multiplicity="*" />
+          <End Type="Model.UserGroupDO" Role="UserGroupDO" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroupDO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UGAssignmentDO">
+              <PropertyRef Name="Id_UserGroup" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GPAssignmentDOUserGroupDO">
+          <End Type="Model.GPAssignmentDO" Role="GPAssignmentDO" Multiplicity="*" />
+          <End Type="Model.UserGroupDO" Role="UserGroupDO" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroupDO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GPAssignmentDO">
+              <PropertyRef Name="Id_UserGroup" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RPAssignmentDORoleDo">
+          <End Type="Model.RPAssignmentDO" Role="RPAssignmentDO" Multiplicity="*" />
+          <End Type="Model.RoleDo" Role="RoleDo" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="RoleDo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RPAssignmentDO">
+              <PropertyRef Name="Id_Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="URAssignmentDORoleDo">
+          <End Type="Model.URAssignmentDO" Role="URAssignmentDO" Multiplicity="*" />
+          <End Type="Model.RoleDo" Role="RoleDo" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="RoleDo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="URAssignmentDO">
+              <PropertyRef Name="Id_Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RPAssignmentDOPermissionDO">
+          <End Type="Model.RPAssignmentDO" Role="RPAssignmentDO" Multiplicity="*" />
+          <End Type="Model.PermissionDO" Role="PermissionDO1" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="PermissionDO1">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="RPAssignmentDO">
+              <PropertyRef Name="Id_Per" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GPAssignmentDOPermissionDO">
+          <End Type="Model.GPAssignmentDO" Role="GPAssignmentDO" Multiplicity="*" />
+          <End Type="Model.PermissionDO" Role="PermissionDO1" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="PermissionDO1">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="GPAssignmentDO">
+              <PropertyRef Name="Id_Permission" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UPAssignmentDOPermissionDO">
+          <End Type="Model.UPAssignmentDO" Role="UPAssignmentDO" Multiplicity="*" />
+          <End Type="Model.PermissionDO" Role="PermissionDO1" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="PermissionDO1">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UPAssignmentDO">
+              <PropertyRef Name="Id_Permission" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserUPAssignmentDO">
+          <End Type="Model.UPAssignmentDO" Role="UPAssignmentDO" Multiplicity="*" />
+          <End Type="Model.UserDO" Role="User" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UPAssignmentDO">
+              <PropertyRef Name="Id_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UGAssignmentDOUser">
+          <End Type="Model.UGAssignmentDO" Role="UGAssignmentDO" Multiplicity="*" />
+          <End Type="Model.UserDO" Role="User" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UGAssignmentDO">
+              <PropertyRef Name="Id_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="URAssignmentDOUser">
+          <End Type="Model.URAssignmentDO" Role="URAssignmentDO" Multiplicity="*" />
+          <End Type="Model.UserDO" Role="UserDO" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="UserDO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="URAssignmentDO">
+              <PropertyRef Name="Id_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ModelContainer">
+    <EntitySetMapping Name="Problem">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.ProblemDO)">
+        <MappingFragment StoreEntitySet="Problem">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+          <ScalarProperty Name="Input" ColumnName="Input" />
+          <ScalarProperty Name="Output" ColumnName="Output" />
+          <ScalarProperty Name="Sample_input" ColumnName="Sample_input" />
+          <ScalarProperty Name="Sample_output" ColumnName="Sample_output" />
+          <ScalarProperty Name="Fg_special" ColumnName="Fg_special" />
+          <ScalarProperty Name="Hint" ColumnName="Hint" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="In_date" ColumnName="In_date" />
+          <ScalarProperty Name="Time_limit" ColumnName="Time_limit" />
+          <ScalarProperty Name="Memory_limit" ColumnName="Memory_limit" />
+          <ScalarProperty Name="Defunct" ColumnName="Defunct" />
+          <ScalarProperty Name="Accepted" ColumnName="Accepted" />
+          <ScalarProperty Name="Submit" ColumnName="Submit" />
+          <ScalarProperty Name="Solved" ColumnName="Solved" />
+          <ScalarProperty Name="Difficulty" ColumnName="Difficulty" />
+          <ScalarProperty Name="Uploader" ColumnName="Uploader" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solution">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.SolutionDO)">
+        <MappingFragment StoreEntitySet="Solution">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_problem" ColumnName="id_problem" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="memory" ColumnName="memory" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="result" ColumnName="result" />
+          <ScalarProperty Name="id_language" ColumnName="id_language" />
+          <ScalarProperty Name="userIp" ColumnName="userIp" />
+          <ScalarProperty Name="codeLenght" ColumnName="codeLenght" />
+          <ScalarProperty Name="judgeTime" ColumnName="judgeTime" />
+          <ScalarProperty Name="pass_rate" ColumnName="pass_rate" />
+          <ScalarProperty Name="id_contest" ColumnName="id_contest" />
+          <ScalarProperty Name="valid" ColumnName="valid" />
+          <ScalarProperty Name="num" ColumnName="num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SourceCode">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.SourceCodeDO)">
+        <MappingFragment StoreEntitySet="SourceCode">
+          <ScalarProperty Name="Id_solution" ColumnName="Id_solution" />
+          <ScalarProperty Name="Source_code" ColumnName="Source_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.UserDO)">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Submit" ColumnName="Submit" />
+          <ScalarProperty Name="Solved" ColumnName="Solved" />
+          <ScalarProperty Name="RegTime" ColumnName="RegTime" />
+          <ScalarProperty Name="AccessTime" ColumnName="AccessTime" />
+          <ScalarProperty Name="RegIp" ColumnName="RegIp" />
+          <ScalarProperty Name="AccessIp" ColumnName="AccessIp" />
+          <ScalarProperty Name="Defunct" ColumnName="Defunct" />
+          <ScalarProperty Name="School" ColumnName="School" />
+          <ScalarProperty Name="Id_language" ColumnName="Id_language" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Language">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.LanguageDO)">
+        <MappingFragment StoreEntitySet="Language">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loginlog">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.LoginlogDO)">
+        <MappingFragment StoreEntitySet="Loginlog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="logintime" ColumnName="logintime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroup">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.UserGroupDO)">
+        <MappingFragment StoreEntitySet="UserGroup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.RoleDo)">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permission">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PermissionDO)">
+        <MappingFragment StoreEntitySet="Permission">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RPAssignment">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.RPAssignmentDO)">
+        <MappingFragment StoreEntitySet="RPAssignment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Role" ColumnName="Id_Role" />
+          <ScalarProperty Name="Id_Per" ColumnName="Id_Per" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="URAssignment">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.URAssignmentDO)">
+        <MappingFragment StoreEntitySet="URAssignment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Id_Role" ColumnName="Id_Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UGAssignment">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.UGAssignmentDO)">
+        <MappingFragment StoreEntitySet="UGAssignment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Id_UserGroup" ColumnName="Id_UserGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPAssignment">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.GPAssignmentDO)">
+        <MappingFragment StoreEntitySet="GPAssignment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_UserGroup" ColumnName="Id_UserGroup" />
+          <ScalarProperty Name="Id_Permission" ColumnName="Id_Permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UPAssignment">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.UPAssignmentDO)">
+        <MappingFragment StoreEntitySet="UPAssignment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Id_Permission" ColumnName="Id_Permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="默认值" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4570347010e3458e9ac5eb2d2453bea3" Name="关系图1" ZoomLevel="65">
+        <EntityTypeShape EntityType="Model.ProblemDO" Width="1.5" PointX="2.75" PointY="4.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.SolutionDO" Width="1.5" PointX="4.125" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SourceCodeDO" Width="1.5" PointX="4.125" PointY="3.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.UserDO" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.LanguageDO" Width="1.5" PointX="5.75" PointY="4.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.LoginlogDO" Width="1.5" PointX="7.625" PointY="3.25" IsExpanded="false" />
+        <AssociationConnector Association="Model.problemsolution" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.solutionsourceCode" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.usersolution" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.languageuser" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.languagesolution" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.userloginlog" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.UserGroupDO" Width="1.5" PointX="12.875" PointY="3.5" FillColor="205, 205, 205" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.RoleDo" Width="1.5" PointX="12.75" PointY="4.625" FillColor="205, 205, 205" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.PermissionDO" Width="1.5" PointX="14.875" PointY="5.75" FillColor="205, 205, 205" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.RPAssignmentDO" Width="1.5" PointX="14.875" PointY="4.625" FillColor="205, 205, 205" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.URAssignmentDO" Width="1.5" PointX="10.75" PointY="4.625" FillColor="205, 205, 205" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.UGAssignmentDO" Width="1.5" PointX="10.75" PointY="3.625" FillColor="205, 205, 205" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.GPAssignmentDO" Width="1.5" PointX="14.875" PointY="3.5" FillColor="205, 205, 205" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.UPAssignmentDO" Width="1.5" PointX="10.75" PointY="5.875" FillColor="205, 205, 205" IsExpanded="false" />
+        <AssociationConnector Association="Model.UGAssignmentDOUserGroupDO" />
+        <AssociationConnector Association="Model.GPAssignmentDOUserGroupDO" />
+        <AssociationConnector Association="Model.RPAssignmentDORoleDo" />
+        <AssociationConnector Association="Model.URAssignmentDORoleDo" />
+        <AssociationConnector Association="Model.RPAssignmentDOPermissionDO" />
+        <AssociationConnector Association="Model.GPAssignmentDOPermissionDO" />
+        <AssociationConnector Association="Model.UPAssignmentDOPermissionDO" />
+        <AssociationConnector Association="Model.UserUPAssignmentDO" />
+        <AssociationConnector Association="Model.UGAssignmentDOUser" />
+        <AssociationConnector Association="Model.URAssignmentDOUser" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

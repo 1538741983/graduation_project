@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OJService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54799/OJService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54799/OJService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54799/OJService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OJ.Domain" />
+      <xsd:import schemaLocation="http://localhost:54799/OJService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:54799/OJService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:54799/OJService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/OJ.BLL.PageList" />
+      <xsd:import schemaLocation="http://localhost:54799/OJService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOJService_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetProblemList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemList" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetProblemList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetProblemPageList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemPageList" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetProblemPageList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemPageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetProblemById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemById" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetProblemById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_AddProblem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProblem" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_AddProblem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProblemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_UpdateProblem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProblem" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_UpdateProblem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProblemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_DeleleProblemById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleleProblemById" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_DeleleProblemById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleleProblemByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_DeleleProblem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleleProblem" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_DeleleProblem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleleProblemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_SubmitCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitCode" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_SubmitCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_SubmitJudgeResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitJudgeResult" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_SubmitJudgeResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitJudgeResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetSolutionPageList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolutionPageList" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetSolutionPageList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolutionPageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetUserDoByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDoByUserName" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetUserDoByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDoByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetUserPageList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPageList" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetUserPageList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_AddUserDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserDo" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_AddUserDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_DeleteUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserById" />
+  </wsdl:message>
+  <wsdl:message name="IOJService_DeleteUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOJService">
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/Test" message="tns:IOJService_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/TestResponse" message="tns:IOJService_Test_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/GetProblemList" message="tns:IOJService_GetProblemList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/GetProblemListResponse" message="tns:IOJService_GetProblemList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemPageList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/GetProblemPageList" message="tns:IOJService_GetProblemPageList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/GetProblemPageListResponse" message="tns:IOJService_GetProblemPageList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/GetProblemById" message="tns:IOJService_GetProblemById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/GetProblemByIdResponse" message="tns:IOJService_GetProblemById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProblem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/AddProblem" message="tns:IOJService_AddProblem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/AddProblemResponse" message="tns:IOJService_AddProblem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProblem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/UpdateProblem" message="tns:IOJService_UpdateProblem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/UpdateProblemResponse" message="tns:IOJService_UpdateProblem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleleProblemById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/DeleleProblemById" message="tns:IOJService_DeleleProblemById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/DeleleProblemByIdResponse" message="tns:IOJService_DeleleProblemById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleleProblem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/DeleleProblem" message="tns:IOJService_DeleleProblem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/DeleleProblemResponse" message="tns:IOJService_DeleleProblem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/SubmitCode" message="tns:IOJService_SubmitCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/SubmitCodeResponse" message="tns:IOJService_SubmitCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitJudgeResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/SubmitJudgeResult" message="tns:IOJService_SubmitJudgeResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/SubmitJudgeResultResponse" message="tns:IOJService_SubmitJudgeResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionPageList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/GetSolutionPageList" message="tns:IOJService_GetSolutionPageList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/GetSolutionPageListResponse" message="tns:IOJService_GetSolutionPageList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDoByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/GetUserDoByUserName" message="tns:IOJService_GetUserDoByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/GetUserDoByUserNameResponse" message="tns:IOJService_GetUserDoByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPageList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/GetUserPageList" message="tns:IOJService_GetUserPageList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/GetUserPageListResponse" message="tns:IOJService_GetUserPageList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/GetUserById" message="tns:IOJService_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/GetUserByIdResponse" message="tns:IOJService_GetUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/AddUser" message="tns:IOJService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/AddUserResponse" message="tns:IOJService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/AddUserDo" message="tns:IOJService_AddUserDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/AddUserDoResponse" message="tns:IOJService_AddUserDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/UpdateUser" message="tns:IOJService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/UpdateUserResponse" message="tns:IOJService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJService/DeleteUserById" message="tns:IOJService_DeleteUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJService/DeleteUserByIdResponse" message="tns:IOJService_DeleteUserById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOJService" type="tns:IOJService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/IOJService/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemList">
+      <soap:operation soapAction="http://tempuri.org/IOJService/GetProblemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemPageList">
+      <soap:operation soapAction="http://tempuri.org/IOJService/GetProblemPageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemById">
+      <soap:operation soapAction="http://tempuri.org/IOJService/GetProblemById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProblem">
+      <soap:operation soapAction="http://tempuri.org/IOJService/AddProblem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProblem">
+      <soap:operation soapAction="http://tempuri.org/IOJService/UpdateProblem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleleProblemById">
+      <soap:operation soapAction="http://tempuri.org/IOJService/DeleleProblemById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleleProblem">
+      <soap:operation soapAction="http://tempuri.org/IOJService/DeleleProblem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCode">
+      <soap:operation soapAction="http://tempuri.org/IOJService/SubmitCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitJudgeResult">
+      <soap:operation soapAction="http://tempuri.org/IOJService/SubmitJudgeResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionPageList">
+      <soap:operation soapAction="http://tempuri.org/IOJService/GetSolutionPageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDoByUserName">
+      <soap:operation soapAction="http://tempuri.org/IOJService/GetUserDoByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPageList">
+      <soap:operation soapAction="http://tempuri.org/IOJService/GetUserPageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/IOJService/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IOJService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserDo">
+      <soap:operation soapAction="http://tempuri.org/IOJService/AddUserDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IOJService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserById">
+      <soap:operation soapAction="http://tempuri.org/IOJService/DeleteUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OJService">
+    <wsdl:port name="BasicHttpBinding_IOJService" binding="tns:BasicHttpBinding_IOJService">
+      <soap:address location="http://localhost:54799/OJService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

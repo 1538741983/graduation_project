@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OJCMSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8082/OJCMSService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8082/OJCMSService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8082/OJCMSService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OJCMS.Domain" />
+      <xsd:import schemaLocation="http://localhost:8082/OJCMSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:8082/OJCMSService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOJCMSService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetMenuList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuList" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetMenuList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteMenuById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMenuById" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteMenuById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMenuByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetChildrenMenuList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildrenMenuList" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetChildrenMenuList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildrenMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetMenuDoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDoById" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetMenuDoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_UpdateMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMenu" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_UpdateMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMenu" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMenuResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOJCMSService">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/DoWork" message="tns:IOJCMSService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/DoWorkResponse" message="tns:IOJCMSService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetMenuList" message="tns:IOJCMSService_GetMenuList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetMenuListResponse" message="tns:IOJCMSService_GetMenuList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenuById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/DeleteMenuById" message="tns:IOJCMSService_DeleteMenuById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/DeleteMenuByIdResponse" message="tns:IOJCMSService_DeleteMenuById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildrenMenuList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetChildrenMenuList" message="tns:IOJCMSService_GetChildrenMenuList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetChildrenMenuListResponse" message="tns:IOJCMSService_GetChildrenMenuList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetMenuDoById" message="tns:IOJCMSService_GetMenuDoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetMenuDoByIdResponse" message="tns:IOJCMSService_GetMenuDoById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/UpdateMenu" message="tns:IOJCMSService_UpdateMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/UpdateMenuResponse" message="tns:IOJCMSService_UpdateMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/AddMenu" message="tns:IOJCMSService_AddMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/AddMenuResponse" message="tns:IOJCMSService_AddMenu_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOJCMSService" type="tns:IOJCMSService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuList">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenuById">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/DeleteMenuById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildrenMenuList">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetChildrenMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDoById">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetMenuDoById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMenu">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/UpdateMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMenu">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/AddMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OJCMSService">
+    <wsdl:port name="BasicHttpBinding_IOJCMSService" binding="tns:BasicHttpBinding_IOJCMSService">
+      <soap:address location="http://localhost:8082/OJCMSService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,88 @@
+﻿@model OJ.Domain.SolutionDO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>SolutionDO</legend>
+
+    <div class="display-label">id_problem</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.id_problem)
+    </div>
+
+    <div class="display-label">id_user</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.id_user)
+    </div>
+
+    <div class="display-label">time</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.time)
+    </div>
+
+    <div class="display-label">memory</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.memory)
+    </div>
+
+    <div class="display-label">createTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.createTime)
+    </div>
+
+    <div class="display-label">result</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.result)
+    </div>
+
+    <div class="display-label">language</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.language.name)
+    </div>
+
+    <div class="display-label">userIp</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.userIp)
+    </div>
+
+    <div class="display-label">codeLenght</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.codeLenght)
+    </div>
+
+    <div class="display-label">judgeTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.judgeTime)
+    </div>
+
+    <div class="display-label">pass_rate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pass_rate)
+    </div>
+
+    <div class="display-label">id_contest</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.id_contest)
+    </div>
+
+    <div class="display-label">valid</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.valid)
+    </div>
+
+    <div class="display-label">num</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.num)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

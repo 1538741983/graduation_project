@@ -1,0 +1,56 @@
+﻿<div id="YOUDAO_SELECTOR_WRAPPER" style="display: none; margin: 0; border: 0; padding: 0; width: 320px; height: 240px;">
+    <iframe id="YOUDAO_SELECTOR_IFRAME" frameborder="0" src="#" style="border: 0px; width: 320px; height: 240px; background-color: white;"></iframe>
+</div>
+@*<script type="text/javascript" src= @Url.Content("~/Content/oj/openapi.do") charset="utf-8"></script>*@
+<link href="../../Content/oj/shCore.css" rel="stylesheet" />
+<link href="../../Content/oj/shThemeDefault.css" rel="stylesheet" />
+
+
+<div style="position: absolute; top: -100000px;" id="soundplayerlayer"></div>
+<script type="text/javascript" reload="1">
+    function soundplayer(file) {
+        document.getElementById('soundplayerlayer').innerHTML = AC_FL_RunContent('id', 'pmsoundplayer', 'name', 'pmsoundplayer', 'width', '0', 'height', '0', 'src', 'files/sound/player.swf', 'FlashVars', 'sFile=files/sound/pm_' + file + '.mp3', 'menu', 'false', 'allowScriptAccess', 'sameDomain', 'swLiveConnect', 'true');
+    }
+</script>
+<!-- header -->
+<div class="header"></div>
+<!-- /header -->
+
+<!-- page-title -->
+<div class="page-title">
+    <div class="wrapper">
+        <a href="http://acm.nyist.net/JudgeOnline/" title="首页" class="logo"></a>
+        <div class="nav-main">
+            <div class="nav-main-head">
+                <a href="http://acm.nyist.net/JudgeOnline/about.php">ACM队</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    			
+                    <a href="http://acm.nyist.net/JudgeOnline/profile.php?userid="></a>
+            </div>
+            <div class="logstate"><a href="http://acm.nyist.net/JudgeOnline/login.php">登录</a><a href="http://acm.nyist.net/JudgeOnline/reg.php">注册</a></div>
+
+        </div>
+        <div class="clear"></div>
+        <!-- nav-second -->
+        <div class="nav-second">
+            <div class="page-info">
+                <a href="http://acm.nyist.net/JudgeOnline/problem.php">
+                    <img src="../../Content/oj/rand.png">随机选题</a>
+                <div class="user-state"><a href="http://acm.nyist.net/JudgeOnline/reg.php">还没有账号？</a></div>
+            </div>
+            <ul>
+                <li><a href="#">练习</a></li>
+                <li><a href="http://acm.nyist.net/JudgeOnline/problemtypelist.php">分类</a></li>
+                <li><a href="http://acm.nyist.net/JudgeOnline/contestset.php" title="比赛进行中……"><font color="#66FF00">比赛</font></a></li>
+                <li><a href="http://acm.nyist.net/JudgeOnline/class.php">班级</a></li>
+                <li><a href="http://acm.nyist.net/JudgeOnline/rank.php">排名</a></li>
+                <li><a href="http://acm.nyist.net/JudgeOnline/about.php">关于</a></li>
+            </ul>
+            <div class="nav-second-right"></div>
+            <div class="clear"></div>
+        </div>
+        <!-- /nav-second -->
+    </div>
+</div>
+<!-- /page-title -->
+
+

@@ -1,0 +1,6 @@
+1、源文件文件夹中是系统源代码，分为JudgeEngine（评测引擎）、OJ（在线评测）、OJCMS（在线评测后台管理系统）
+2、发布文件夹中是已发布的项目文件，需要在IIS中部署，.Net4.0环境，
+3、部署要求：OJService端口:8081,CMSService端口：8082，OJ端口：8083，OJCMS端口：8084，JudgeService端口：8087
+4、后台管理端网址：http://localhost:8084/Login.aspx  用户名：hao_wu  密码：123
+5、前台网址：http://localhost:8083/
+6、数据库为SqlServer2008  直接附加即可

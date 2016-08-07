@@ -1,0 +1,111 @@
+﻿@model IEnumerable<OJ.Domain.SolutionDO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            id_problem
+        </th>
+        <th>
+            id_user
+        </th>
+        <th>
+            time
+        </th>
+        <th>
+            memory
+        </th>
+        <th>
+            createTime
+        </th>
+        <th>
+            result
+        </th>
+        <th>
+            language
+        </th>
+        <th>
+            userIp
+        </th>
+        <th>
+            codeLenght
+        </th>
+        <th>
+            judgeTime
+        </th>
+        <th>
+            pass_rate
+        </th>
+        <th>
+            id_contest
+        </th>
+        <th>
+            valid
+        </th>
+        <th>
+            num
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_problem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_user)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.memory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.result)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.language.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userIp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codeLenght)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.judgeTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pass_rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_contest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OJ.BLL.PageList" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OJ.BLL.PageList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54799/OJService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OJ.Domain" />
+  <xs:complexType name="ProblemPageList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PageListOfProblemDOUWpDsVqM">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemPageList" nillable="true" type="tns:ProblemPageList" />
+  <xs:complexType name="PageListOfProblemDOUWpDsVqM">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PageListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/OJ.BLL.PageList" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ProblemDO" Namespace="http://schemas.datacontract.org/2004/07/OJ.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentPage" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OJ.Domain" minOccurs="0" name="DataList" nillable="true" type="q1:ArrayOfProblemDO" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPages" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageListOfProblemDOUWpDsVqM" nillable="true" type="tns:PageListOfProblemDOUWpDsVqM" />
+  <xs:complexType name="SolutionPageList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PageListOfSolutionDOUWpDsVqM">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SolutionPageList" nillable="true" type="tns:SolutionPageList" />
+  <xs:complexType name="PageListOfSolutionDOUWpDsVqM">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PageListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/OJ.BLL.PageList" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SolutionDO" Namespace="http://schemas.datacontract.org/2004/07/OJ.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentPage" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OJ.Domain" minOccurs="0" name="DataList" nillable="true" type="q2:ArrayOfSolutionDO" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPages" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageListOfSolutionDOUWpDsVqM" nillable="true" type="tns:PageListOfSolutionDOUWpDsVqM" />
+  <xs:complexType name="UserPageList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PageListOfUserDOUWpDsVqM">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserPageList" nillable="true" type="tns:UserPageList" />
+  <xs:complexType name="PageListOfUserDOUWpDsVqM">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PageListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/OJ.BLL.PageList" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UserDO" Namespace="http://schemas.datacontract.org/2004/07/OJ.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentPage" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OJ.Domain" minOccurs="0" name="DataList" nillable="true" type="q3:ArrayOfUserDO" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPages" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageListOfUserDOUWpDsVqM" nillable="true" type="tns:PageListOfUserDOUWpDsVqM" />
+</xs:schema>

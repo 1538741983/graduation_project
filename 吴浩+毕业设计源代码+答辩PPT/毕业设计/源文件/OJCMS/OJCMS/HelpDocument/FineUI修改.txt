@@ -1,0 +1,9 @@
+FineUI部署
+1.拷贝lib文件夹到项目文件夹中.（含有两个dll）
+2.拷贝res,extjs文件夹到项目中.
+3.拷贝web.config文件到项目中覆盖.
+4.解开IIS7的注释，按照下面的修改方式修改.
+
+
+在<system.webServer>中加入<validation validateIntegratedModeConfiguration="false"/>
+将<system.webServer>中<handlers>中删除validate="false"

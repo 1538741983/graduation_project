@@ -1,0 +1,87 @@
+﻿@model IEnumerable<OJ.OJService.UserDO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>nickName
+        </th>
+        <th>password
+        </th>
+        <th>email
+        </th>
+        <th>submit
+        </th>
+        <th>solved
+        </th>
+        <th>regTime
+        </th>
+        <th>accessTime
+        </th>
+        <th>regIp
+        </th>
+        <th>accessIp
+        </th>
+        <th>defunct
+        </th>
+        <th>school
+        </th>
+        <th>language
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nickName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.submit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.solved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.regTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accessTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.regIp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accessIp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.defunct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.school)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.language.name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

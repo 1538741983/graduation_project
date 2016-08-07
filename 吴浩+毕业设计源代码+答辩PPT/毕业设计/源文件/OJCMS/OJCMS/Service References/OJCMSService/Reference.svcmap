@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2f3f626-f35a-4786-9eef-d9bd14c32e56" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8082/OJCMSService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OJCMSService1.xsd" MetadataType="Schema" ID="7cfab7b7-0a9f-4b18-bf99-ddba8122c00f" SourceId="1" SourceUrl="http://localhost:8082/OJCMSService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OJCMSService2.xsd" MetadataType="Schema" ID="6c74a4fc-67e0-4dfc-bf42-4110759ffb99" SourceId="1" SourceUrl="http://localhost:8082/OJCMSService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OJCMSService.wsdl" MetadataType="Wsdl" ID="0504205c-4eec-4b28-a711-44feae643af2" SourceId="1" SourceUrl="http://localhost:8082/OJCMSService.svc?wsdl" />
+    <MetadataFile FileName="OJCMSService21.xsd" MetadataType="Schema" ID="4525c237-d68e-4507-9260-0502ad3d5b71" SourceId="1" SourceUrl="http://localhost:8082/OJCMSService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OJCMSService.disco" MetadataType="Disco" ID="c87de99e-9fa9-4733-8736-678697f3368e" SourceId="1" SourceUrl="http://localhost:8082/OJCMSService.svc?disco" />
+    <MetadataFile FileName="OJCMSService22.xsd" MetadataType="Schema" ID="f82c7eac-452f-46bf-94a4-67db8654ce55" SourceId="1" SourceUrl="http://localhost:8082/OJCMSService.svc?xsd=xsd4" />
+    <MetadataFile FileName="OJCMSService.xsd" MetadataType="Schema" ID="1116e314-4b20-46f6-89e3-32e6e3ea929f" SourceId="1" SourceUrl="http://localhost:8082/OJCMSService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

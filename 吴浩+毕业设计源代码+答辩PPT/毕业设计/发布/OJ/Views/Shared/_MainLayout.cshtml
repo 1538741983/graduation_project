@@ -1,0 +1,87 @@
+﻿@using OJ.OJService
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/Content/Resource/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="/Content/Resource/js/jquery.min.js"></script>
+    <script src="/Content/Resource/bootstrap/js/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <!--head-->
+            <div class="span12">
+
+                <!--Menu-->
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="nav-header">
+                        <a class="navbar-brand col-sm-2 text-center" href="@Url.Action("ProblemList", "Problem")">在线评测系统</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            @Html.ActionLink("练习", "ProblemList", "Problem")
+                        </li>
+                        <li>
+                            @Html.ActionLink("运行结果", "SolutionList", "Solution")
+                        </li>
+                        <li>
+                            <a href="#">分类</a>
+                        </li>
+                        <li>
+                            <a href="#">比赛</a>
+                        </li>
+                        <li>
+                            <a href="#">班级</a>
+                        </li>
+                        <li>
+                            <a href="#">排名</a>
+                        </li>
+                        <li>
+                            <a href="#">关于</a>
+                        </li>
+                    </ul>
+                    <div id="userInfo">
+                        <ul class="nav navbar-nav pull-right">
+                            @{
+                                object obj = Session["User"];
+                                if (obj == null)
+                                {
+                        
+                                <li>
+                                    <a href="@Url.Action("Login", "User")">登录</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Regist", "User")">注册</a>
+                                </li>
+                            
+                                }
+                                else
+                                {
+                                    UserDO user = obj as UserDO;
+                                <li>
+                                    @*<a href="@Url.Action("Login", "User")">登录</a>*@
+                                    <a>@(user == null ? "test" : user.Username)</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Logout", "User")">退出</a>
+                                </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="row-fluid">
+                    <div class="col-sm-1"></div>
+                    @RenderBody()
+                    <div class="col-sm-1"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Regist";
+}
+
+<div class="col-md-10">
+    <div class="panel panel-default" style="margin-left: 200px; margin-right: 200px; margin-top: 50px">
+        <div class="panel-heading">
+            <h3 class="panel-title">注册</h3>
+        </div>
+        <div class="panel-body">
+            <form method="POST">
+                <div class="form-group">
+                    <label class="col-md-3 control-label text-right " style="margin-left: 50px;">用户名</label>
+                    <input name="username" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label text-right" style="margin-left: 50px;">密码</label>
+                    <input name="password" type="password" />
+                </div>
+               @* <div class="form-group">
+                    <label class="col-md-3 control-label text-right" style="margin-left: 50px;">确认密码</label>
+                    <input name="confirmPassword" type="password" />
+                    <label>@ViewData["confirmpassword"]</label>
+                </div>*@
+                <div class="form-group">
+                    <label class="col-md-3 control-label text-right" style="margin-left: 50px;">EMail</label>
+                    <input name="email" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label text-right" style="margin-left: 50px;">QQ</label>
+                    <input name="qq" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label text-right" style="margin-left: 50px;">联系电话</label>
+                    <input name="tel" type="text" />
+                </div>
+                <button class="btn" type="submit" style="margin-left: 120px; width: 210px;">注册</button>
+            </form>
+        </div>
+    </div>
+
+</div>

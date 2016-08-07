@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tree>
+  <TreeNode Text="用户管理"  Target="mainframe" NavigateUrl="./temp/sys/UserManage.aspx" >
+  </TreeNode>
+  <TreeNode Text="用户组管理"  Target="mainframe" NavigateUrl="./temp/sys/UserGroupManage.aspx">
+  </TreeNode>
+  <TreeNode Text="权限管理"  Target="mainframe" NavigateUrl="./temp/sys/RoleManage.aspx">
+  </TreeNode>
+  <TreeNode  Text="菜单维护" Target="mainframe" NavigateUrl="./temp/sys/MenuManage.aspx">
+  </TreeNode>
+
+</Tree>

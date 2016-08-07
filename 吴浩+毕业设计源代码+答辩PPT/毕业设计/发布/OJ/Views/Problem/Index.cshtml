@@ -1,0 +1,108 @@
+﻿@model IEnumerable<OJ.OJService.ProblemDO>
+@functions {
+    private string _s;
+}
+@{
+    ViewBag.Title = "练习场 - ACM在线评测系统";
+}
+
+<div class="main">
+
+    <ul class="nav3">
+        <li class="cat">练习场</li>
+        <li class="current"><a href="#">题目列表</a></li>
+        <li>@Html.ActionLink("运行结果", "Create", "ProblemDO")@*<a href="http://acm.nyist.net/JudgeOnline/status.php">运行结果</a>*@</li>
+        <div class="clr"></div>
+    </ul>
+    <div class="pagination">
+        <ul class="pagination">
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=1">&lt;&lt;</a></li>
+            <li class="current">1</li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=2">2</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=3">3</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=4">4</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=5">5</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=6">6</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=7">7</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=8">8</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=9">9</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=10">10</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=11">11</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=12">&gt;&gt;</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+
+    <table id="alternate" class="table-list" cellpadding="0" cellspacing="0" style="font-size: 12px;">
+        <thead>
+            <tr class="even">
+                <th class="pass" width="30">通过 </th>
+                <th width="30" class="id">题号 </th>
+                <th width="44">难度</th>
+                <th width="79" class="title">标题 </th>
+                <th colspan="2">通过率 </th>
+                <th style="width: 40px;">标程</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 0;
+                foreach (var item in Model)
+                {
+                    i += 1;
+                <tr @{
+                    if (i % 2 == 0)
+                    {
+                        string str = "class=even";
+                        @str
+                    }
+                }>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pass)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Difficulty)
+                    </td>
+                    <td class="probname tal">
+                        @Html.ActionLink(item.Title, "Details", new { item.Id })
+                        @* @Html.DisplayFor(modelItem => item.title)*@
+                    </td>
+                    <td width="55">
+                        @Html.DisplayFor(modelItem => item.PassRate)%
+                    @*@Html.DisplayFor(modelItem => item,new {value})*@
+                    </td>
+                    <td class="pass-total tal">(@item.Accepted/@item.Submit)
+                    </td>
+                    <td>
+                        @* @Html.DisplayFor(modelItem => item.sample_output)*@
+                    </td>
+                </tr>
+                }
+            }
+
+        </tbody>
+
+    </table>
+    <div class="pagination">
+        <ul class="pagination">
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=1">&lt;&lt;</a></li>
+            <li class="current">1</li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=2">2</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=3">3</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=4">4</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=5">5</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=6">6</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=7">7</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=8">8</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=9">9</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=10">10</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=11">11</a></li>
+            <li><a href="http://acm.nyist.net/JudgeOnline/problemset.php?page=12">&gt;&gt;</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>

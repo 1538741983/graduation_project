@@ -1,0 +1,328 @@
+﻿@charset "utf-8";
+/* tmp */
+.succ_tips {
+    padding: 30px 20px 30px 80px;
+    border: 1px solid #95DD95;
+    font-size: 14px;
+    line-height: 20px;
+    background: url(../img/succ.gif) #EEFFEE 15px 15px no-repeat;
+    color: #555555;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.warning_tips {
+    padding: 30px 20px 30px 80px;
+    border: 1px solid #95DD95;
+    font-size: 14px;
+    line-height: 20px;
+    background: url(../img/warning.png) #EEFFEE 15px 15px no-repeat;
+    color: #555555;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+
+/* CSS Document */
+
+.clr {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+table th {
+    border-right: 1px solid #FFFFFF;
+}
+
+/*三级导航*/
+.nav3 {
+    margin: 10px 0 15px;
+    border-bottom: 1px solid #9fb7c7;
+    *height: 27px;
+    _height: 24px; /*hack*/
+}
+
+    .nav3 li {
+        float: left;
+        height: 24px;
+        line-height: 24px;
+        margin: 0 5px;
+        padding: 1px 7px;
+    }
+
+    .nav3 .cat {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 20px 0 10px;
+    }
+
+    .nav3 .current {
+        position: relative;
+        top: 1px;
+        border: 1px solid #9fb7c7;
+        border-bottom-color: #fff;
+        background-color: #fff;
+        border-top-right-radius: 4px;
+        -moz-border-radius-topright: 4px;
+        -webkit-border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+        -webkit-border-top-left-radius: 4px;
+    }
+
+    .nav3 .ac {
+        float: right;
+    }
+
+    .nav3 .icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../img/icons.png) 0 0 no-repeat;
+        vertical-align: middle;
+        margin: 0 2px;
+    }
+
+    .nav3 .mark .icon {
+        background-position: 0 -16px;
+    }
+
+    .nav3 .edit .icon {
+        background-position: -16px -16px;
+    }
+
+/*信息提示框*/
+.message-box {
+    padding: 2px 10px;
+    margin: 8px 0;
+    font-size: 14px;
+    border: 1px solid #eee4aa;
+    background-color: #fff9b7;
+    position: relative;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+    .message-box .icon {
+        float: left;
+        height: 16px;
+        width: 16px;
+        margin: 3px 10px 0 0;
+    }
+
+    .message-box .close {
+        float: right;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        right: 10px;
+        top: 3px;
+    }
+
+.warnning-message .icon {
+    background: url(../img/tipicon.gif) 0 0 no-repeat;
+}
+
+.error-message .icon {
+    background: url(../img/tipicon.gif) 0 -16px no-repeat;
+}
+
+.pass-message .icon {
+    background: url(../img/tipicon.gif) 0 -32px no-repeat;
+}
+
+/* form */
+
+.form1 dt {
+    float: left;
+}
+
+.fieldset1 {
+    clear: both;
+    padding: 1em 1.4em 1.4em 1.4em;
+    margin: 0 0 30px .3em;
+    background: #eef3f8;
+    border: 1px solid #c4d3ea;
+    position: relative;
+}
+
+    .fieldset1 legend {
+        margin: 0 0;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        background: #fff;
+        border: 1px solid #c4d3ea;
+        text-transform: capitalize;
+        color: #336699;
+        left: 20px;
+    }
+
+.field-group {
+    margin: 8px;
+}
+
+    .field-group label {
+        font-weight: bold;
+        float: left;
+        width: 120px;
+        margin-top: 9px;
+        text-align: right;
+        font-size: 12px;
+        color: #555;
+    }
+
+        .field-group label.optional {
+            font-weight: normal;
+        }
+
+        .field-group label.disable {
+            color: #666;
+        }
+
+    .field-group input.line {
+        margin-bottom: 7px;
+    }
+
+    .field-group .tips {
+        display: block;
+        margin-top: 3px;
+        margin-left: 145px;
+        color: #666;
+    }
+
+    .field-group .tips2 {
+        display: block;
+        margin-top: 3px;
+        margin-bottom: 8px;
+        margin-left: 10px;
+        color: #666;
+    }
+
+    .field-group .error {
+        display: block;
+        margin-top: 3px;
+        margin-left: 145px;
+        color: #BD452F;
+    }
+
+.radio-group {
+    margin: 8px;
+    margin-left: 30px;
+}
+
+    .radio-group label {
+        font-size: 14px;
+    }
+
+    .radio-group .tips {
+        display: inline-block;
+        margin-top: 6px;
+        margin-left: 30px;
+        color: #666;
+    }
+
+.control-group {
+    float: left;
+    margin-top: 6px;
+    margin-left: 15px;
+}
+
+.text-group {
+    float: left;
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.tips1 {
+    background-color: #FFF4E0;
+    border: 1px solid #FFE4B3;
+    color: #B55C19;
+    padding: 8px 10px;
+    line-height: 16px;
+    margin: 5px 0;
+}
+
+.rpt_item_title {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 20px;
+}
+
+.rpt_item_desc {
+    font-size: 12px;
+    padding: 6px 20px;
+}
+
+.form1 {
+}
+
+    .form1 table {
+    }
+
+    .form1 tr {
+    }
+
+    .form1 td.title {
+        width: 200px;
+        text-align: right;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 13px 5px;
+        vertical-align: top;
+    }
+
+    .form1 td.body {
+        padding: 5px;
+    }
+
+.input1, .input_err {
+    border: #ccc solid 2px;
+    background-color: #fff;
+    color: #666;
+    margin-left: 15px;
+    padding: 5px;
+    display: inline-block;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    !important;
+    position: relative;
+}
+
+    .input1:focus, textarea:focus {
+        border: 2px solid #ef9e4d;
+        background: #fff;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+    }
+
+.input_err {
+    border: 2px solid #ef9e4d;
+    background-color: #FFE9D6;
+}
+
+.input2 {
+    border: #ccc solid 2px;
+    background-color: #fff;
+    color: #666;
+    margin-left: 15px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.error_msg {
+    padding: 8px 0 8px 15px;
+    border: 1px solid #FF8EAC;
+    background-color: #FFCCCC;
+    color: #555555;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}

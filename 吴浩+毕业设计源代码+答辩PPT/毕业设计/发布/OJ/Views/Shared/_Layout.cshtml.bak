@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="南阳理工学院在线评测系统，简称NYOJ，南阳理工学院ACM队是一支优秀的队伍，一支充满活力与激情的队伍，它满载着光辉与荣誉。。。。">
+    <meta name="keywords" content="在线评测 NYOJ">
+
+    <title>@ViewBag.Title</title>
+    @*<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css"/>*@
+    <link href="@Url.Content("~/Content/oj/style.css")" rel="stylesheet" type="text/css"/>
+    <link href="@Url.Content("~/Content/oj/tmp.css")" rel="stylesheet" type="text/css"/>
+    <link href="@Url.Content("~/Content/oj/toplogo.ico")" rel="shortcut icon">
+    <script src="@Url.Content("~/Content/oj/flashplayer.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/oj/ga.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/oj/NYOJ_net_Analytics.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/oj/jquery-1.3.2.js")" type="text/javascript"></script>
+
+    @* <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-2.5.3.js")" type="text/javascript"></script>*@
+</head>
+
+<body>
+    @{
+        Html.RenderPartial("Header");
+    }
+    <!-- content -->
+    <div class="content">
+        <div class="wrapper">
+            <!-- side -->
+            <div class="side">
+                <!--[if IE 6]><div style="height:600px; width:0px; float:left;"></div><![endif]-->
+
+                <h2>&nbsp;</h2>
+                <div id="gadgets">
+                    <h3>公告</h3>
+
+                    <div class="sidebar_content">
+                        <marquee direction="up" scrolldelay="100" scrollamount="2" truespeed="truespeed" onmouseover="this.stop()" onmouseout="this.start()" height="200" style="height: 200px;"> 
+整天刷水题就是浪费生命，NYOJ推出智能屏蔽功能，根据你的水平，智能的为你屏蔽掉题目列表中的水题。（不影响其它方式打开该题目,并可关掉该功能）。
+<br>欢迎试用
+<hr>
+
+<font color="red">为解决OJ经常卡顿的问题，目前排名修改为了非实时的排名，数据每隔一个小时更新一次</font><br>
+
+<br>
+<br>
+
+每天AC一道题，一年365道题，你就能成为一个编程高手
+<br><br>
+
+<font color="blue">南工ACM校集训队新开官方博客与微博，快来围观吧！</font><br>
+<a href="http://blog.sina.com.cn/u/3969932680" target="_blank">南工ACM校集训队博客</a><br>
+<a href="http://weibo.com/u/3969932680" target="_blank">南工ACM校集训队微博</a><br><br>
+
+
+官方QQ群一：<font color="red">124588807</font>（请自觉确保已经AC至少100道题目） <br>
+官方QQ群二：<font color="red">1625009</font> （请确保已经AC至少50道题目）<br>
+官方QQ群三：<font color="red">143980285</font> （请确保该账号已经AC至少30道题目）<br>
+官方贴吧：<a href="http://tieba.baidu.com/f?kw=%C4%CF%D1%F4%C0%ED%B9%A4%D1%A7%D4%BAacmicpc" target="_blank">南阳理工学院acmicpc吧</a><br>
+另有：南工ACM数学群57797885，欢迎数学系学生或者更喜欢数学的同学加入(本数学群只加本校学生，请外校学生尽量少申请此群，谢谢合作）。</marquee>
+                    </div>
+                    <hr style="border: dotted 1px #CCC">
+                    <br>
+                    <form method="GET" action="http://acm.nyist.net/JudgeOnline/problem.php">
+                        <fieldset>
+                            题目编号<input name="pid" value="" size="15">
+                            <button type="submit" class="btn">转到</button>
+                        </fieldset>
+                    </form>
+                    <br>
+                    <form method="GET" action="http://acm.nyist.net/JudgeOnline/keysearch.php">
+                        <fieldset>
+                            题目信息<input name="key" value="" size="15">
+                            <button type="submit" class="btn">搜索</button>
+                        </fieldset>
+                    </form>
+                    <br>
+                    <form method="GET" action="http://acm.nyist.net/JudgeOnline/search_information.php">
+                        <fieldset>
+                            <button type="submit" class="btn">高级查找</button>
+                        </fieldset>
+                    </form>
+                    <br>
+                </div>
+            </div>
+            <!-- /side -->
+
+            @RenderBody()
+
+            <!--[if IE 6]><div style="width:0;height:300px;float:left;"></div><![endif]-->
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- /content -->
+    @{
+        Html.RenderPartial("Footer");
+    }
+</body>
+</html>

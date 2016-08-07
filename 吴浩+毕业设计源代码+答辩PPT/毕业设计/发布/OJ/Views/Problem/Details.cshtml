@@ -1,0 +1,170 @@
+﻿@using System.Web.Mvc.Html
+@model OJ.Models.ProblemDetailsModel
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<h2>Details</h2>
+
+<fieldset>
+    <legend>ProblemDO</legend>
+
+    <div class="display-label">title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.title)
+    </div>
+
+    <div class="display-label">describe</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.describe)
+    </div>
+
+    <div class="display-label">input</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.input)
+    </div>
+
+    <div class="display-label">output</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.output)
+    </div>
+
+    <div class="display-label">sample_input</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.sample_input)
+    </div>
+
+    <div class="display-label">sample_output</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.sample_output)
+    </div>
+
+    <div class="display-label">fg_special</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.fg_special)
+    </div>
+
+    <div class="display-label">hint</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.hint)
+    </div>
+
+    <div class="display-label">source</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.source)
+    </div>
+
+    <div class="display-label">in_date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.in_date)
+    </div>
+
+    <div class="display-label">time_limit</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.time_limit)
+    </div>
+
+    <div class="display-label">memory_limit</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.memory_limit)
+    </div>
+
+    <div class="display-label">defunct</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.defunct)
+    </div>
+
+    <div class="display-label">accepted</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.accepted)
+    </div>
+
+    <div class="display-label">submit</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.submit)
+    </div>
+
+    <div class="display-label">solved</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => Model.ProblemDO.solved)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Judge", "Judge", new { id = Model.ProblemDO.id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProblemDO.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+
+
+
+<!-- main -->
+<div class="main">
+    <ul class="nav3">
+        <li class="cat">题目@(Model.ProblemDO.Id)</li>
+        <li class="current">@Html.ActionLink("题目信息", "Details")@*<a href="problem.php?pid=2">题目信息</a>*@</li>
+        <li><a href="status.php?pid=2">运行结果</a></li>
+        <li><a href="problemrank.php?pid=2">本题排行</a></li>
+        <li><a href="talking.php?pid=2">讨论区</a></li>
+        <div class="clr"></div>
+    </ul>
+    <div class="problem-display">
+        <h4></h4>
+        <h2>@(Model.ProblemDO.Title)@*括号配对问题*@</h2>
+        <div class="problem-ins">
+            时间限制：<span class="editable highlight" id="problem[time_limit]">@(Model.ProblemDO.Time_limit)@*3000*@</span> ms &nbsp;|&nbsp;
+            内存限制：<span class="editable highlight" id="problem[memory_limit]">@(Model.ProblemDO.Memory_limit)@*65535*@</span> KB
+        </div>
+        <div class="problem-ins">难度：<span class="editable highlight">@(Model.ProblemDO.Difficulty)</span></div>
+    </div>
+    <div class="clr"></div>
+    <dl class="problem-display">
+        <dt>描述 </dt>
+        <dd>@(new HtmlString(Model.ProblemDO.Describe))@*现在，有一行括号序列，请你检查这行括号是否配对。*@</dd>
+        <div class="clr"></div>
+        <dl class="others">
+            <dt>输入</dt>
+            <dd>@(Model.ProblemDO.Input)@*第一行输入一个数N（0&lt;N&lt;=100）,表示有N组测试数据。后面的N行输入多组输入数据，每组输入数据都是一个字符串S(S的长度小于10000，且S不是空串），测试数据组数少于5组。数据保证S中只含有"[","]","(",")"四种字符*@</dd>
+            <dt>输出</dt>
+            <dd>@(Model.ProblemDO.Output)@*每组输入数据的输出占一行，如果该字符串中所含的括号是配对的，则输出Yes,如果不配对则输出No*@</dd>
+            <dt>样例输入</dt>
+            <dd>@(Model.ProblemDO.Sample_input)
+                @*                <pre id="sample_input">3
+[(])
+(])
+([[]()])</pre>*@
+            </dd>
+            <dt>样例输出</dt>
+            <dd>@(Model.ProblemDO.Sample_output)
+                @*                <pre id="sample_output">No
+No
+Yes</pre>*@
+            </dd>
+            <dt>来源</dt>
+            <dd>@(Model.ProblemDO.Source)@*<a href="/JudgeOnline/search_result.php?source=%E7%BD%91%E7%BB%9C">网络</a>*@</dd>
+            <dt>上传者</dt>
+            <dd>@*@Html.ActionLink(Model.ProblemDO.User.nickName, "Details", "User", Model.ProblemDO.User.id)*@@*<a href="profile.php?userid=naonao">naonao</a>*@</dd>
+        </dl>
+    </dl>
+    <br>
+    <dl class="problem-submit">
+        <form id="form_submit" name="form_submit" @*action="submit.php?pid=2"*@ method="post" enctype="application/x-www-form-urlencoded" @*onsubmit="return showlogin()"*@ qform_group_id="">
+            <fieldset>
+                <dt>
+                    <select id="language" name="language">
+                        <option value="C/C++" selected="selected">C/C++</option>
+                        <option value="java">JAVA</option>
+                    </select>
+                    @*@Html.ActionLink("提交", "Judge", null, new { id = "btn_submit"  })*@
+                    <input id="btn_submit" onclick="
+    if (document.getElementById('code').value.length == 0) $('#no_empty_code').show(); else { $('#no_empty_code').hide(); $('#submiting').show(); submit_form('form_submit'); } return false;"
+                        type="submit" name="btn_submit" value="提交" class="btn">
+                </dt>
+                <dd><span id="submiting" class="error" style="display: none">代码提交中......</span> </dd>
+                <dd>
+                    <textarea id="code" name="code"></textarea>
+                    <span id="no_empty_code" class="error" style="display: none">请勿提交空代码!</span> </dd>
+            </fieldset>
+        </form>
+    </dl>
+</div>
+<!-- /main -->

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OJCMSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8739/OJCMSService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8739/OJCMSService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8739/OJCMSService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OJCMS.Domain" />
+      <xsd:import schemaLocation="http://localhost:8739/OJCMSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:8739/OJCMSService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:8739/OJCMSService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/OJCMS.BLL" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOJCMSService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetMenuList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuList" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetMenuList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteMenuById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMenuById" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteMenuById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMenuByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetChildrenMenuList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildrenMenuList" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetChildrenMenuList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildrenMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetUserDoByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDoByUserName" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetUserDoByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDoByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetMenuDoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDoById" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetMenuDoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_UpdateMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMenu" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_UpdateMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMenu" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetUserPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPage" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetUserPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddUserDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserDo" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddUserDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserById" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetRolePage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolePage" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetRolePage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRole" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_AddRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_UpdateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRole" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_UpdateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteRoleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleById" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_DeleteRoleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetRoleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleById" />
+  </wsdl:message>
+  <wsdl:message name="IOJCMSService_GetRoleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOJCMSService">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/DoWork" message="tns:IOJCMSService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/DoWorkResponse" message="tns:IOJCMSService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetMenuList" message="tns:IOJCMSService_GetMenuList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetMenuListResponse" message="tns:IOJCMSService_GetMenuList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenuById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/DeleteMenuById" message="tns:IOJCMSService_DeleteMenuById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/DeleteMenuByIdResponse" message="tns:IOJCMSService_DeleteMenuById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildrenMenuList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetChildrenMenuList" message="tns:IOJCMSService_GetChildrenMenuList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetChildrenMenuListResponse" message="tns:IOJCMSService_GetChildrenMenuList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDoByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetUserDoByUserName" message="tns:IOJCMSService_GetUserDoByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetUserDoByUserNameResponse" message="tns:IOJCMSService_GetUserDoByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetMenuDoById" message="tns:IOJCMSService_GetMenuDoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetMenuDoByIdResponse" message="tns:IOJCMSService_GetMenuDoById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/UpdateMenu" message="tns:IOJCMSService_UpdateMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/UpdateMenuResponse" message="tns:IOJCMSService_UpdateMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/AddMenu" message="tns:IOJCMSService_AddMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/AddMenuResponse" message="tns:IOJCMSService_AddMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetUserPage" message="tns:IOJCMSService_GetUserPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetUserPageResponse" message="tns:IOJCMSService_GetUserPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetUserById" message="tns:IOJCMSService_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetUserByIdResponse" message="tns:IOJCMSService_GetUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/AddUser" message="tns:IOJCMSService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/AddUserResponse" message="tns:IOJCMSService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/AddUserDo" message="tns:IOJCMSService_AddUserDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/AddUserDoResponse" message="tns:IOJCMSService_AddUserDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/UpdateUser" message="tns:IOJCMSService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/UpdateUserResponse" message="tns:IOJCMSService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/DeleteUserById" message="tns:IOJCMSService_DeleteUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/DeleteUserByIdResponse" message="tns:IOJCMSService_DeleteUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolePage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetRolePage" message="tns:IOJCMSService_GetRolePage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetRolePageResponse" message="tns:IOJCMSService_GetRolePage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/AddRole" message="tns:IOJCMSService_AddRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/AddRoleResponse" message="tns:IOJCMSService_AddRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/UpdateRole" message="tns:IOJCMSService_UpdateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/UpdateRoleResponse" message="tns:IOJCMSService_UpdateRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/DeleteRole" message="tns:IOJCMSService_DeleteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/DeleteRoleResponse" message="tns:IOJCMSService_DeleteRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoleById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/DeleteRoleById" message="tns:IOJCMSService_DeleteRoleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/DeleteRoleByIdResponse" message="tns:IOJCMSService_DeleteRoleById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOJCMSService/GetRoleById" message="tns:IOJCMSService_GetRoleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOJCMSService/GetRoleByIdResponse" message="tns:IOJCMSService_GetRoleById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOJCMSService" type="tns:IOJCMSService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuList">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMenuById">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/DeleteMenuById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildrenMenuList">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetChildrenMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDoByUserName">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetUserDoByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDoById">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetMenuDoById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMenu">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/UpdateMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMenu">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/AddMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPage">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetUserPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserDo">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/AddUserDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserById">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/DeleteUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolePage">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetRolePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/AddRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/UpdateRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoleById">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/DeleteRoleById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleById">
+      <soap:operation soapAction="http://tempuri.org/IOJCMSService/GetRoleById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OJCMSService">
+    <wsdl:port name="BasicHttpBinding_IOJCMSService" binding="tns:BasicHttpBinding_IOJCMSService">
+      <soap:address location="http://localhost:8739/OJCMSService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

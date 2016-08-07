@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8739/OJCMSService.svc?xsd=xsd5" filename="OJCMSService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8739/OJCMSService.svc?xsd=xsd1" filename="OJCMSService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8739/OJCMSService.svc?xsd=xsd2" filename="OJCMSService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8739/OJCMSService.svc?xsd=xsd4" filename="OJCMSService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8739/OJCMSService.svc?xsd=xsd3" filename="OJCMSService3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:8739/OJCMSService.svc?wsdl" filename="OJCMSService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:8739/OJCMSService.svc?disco" filename="OJCMSService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8739/OJCMSService.svc?xsd=xsd0" filename="OJCMSService4.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

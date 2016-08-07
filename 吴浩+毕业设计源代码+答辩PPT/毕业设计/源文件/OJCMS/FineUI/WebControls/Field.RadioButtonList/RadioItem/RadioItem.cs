@@ -1,0 +1,154 @@
+﻿
+#region Comment
+
+/*
+ * Project：    FineUI
+ * 
+ * FileName:    ListItem.cs
+ * CreatedOn:   2008-04-23
+ * CreatedBy:   30372245@qq.com
+ * 
+ * 
+ * Description：
+ *      ->
+ *   
+ * History：
+ *      ->
+ * 
+ * 
+ * 
+ * 
+ */
+
+#endregion
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Text;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Drawing;
+using System.Drawing.Design;
+using System.Web.UI.Design.WebControls;
+
+using Newtonsoft.Json;
+using System.Web.UI.HtmlControls;
+using System.Collections;
+
+
+namespace FineUI
+{
+    /// <summary>
+    /// 单项按钮项
+    /// </summary>
+    [ToolboxItem(false)]
+    [ParseChildren(true, DefaultProperty = "Text")]
+    [Description("单项按钮项")]
+    [PersistChildren(false)]
+    [ControlBuilder(typeof(NotAllowWhitespaceLiteralsBuilder))]
+    public class RadioItem
+    {
+        #region Constructor
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        public RadioItem()
+        {
+
+        }
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="text">文本</param>
+        /// <param name="value">值</param>
+        public RadioItem(string text, string value)
+        {
+            Text = text;
+            Value = value;
+        }
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="text">文本</param>
+        /// <param name="value">值</param>
+        /// <param name="selected">是否选中</param>
+        public RadioItem(string text, string value, bool selected)
+        {
+            Text = text;
+            Value = value;
+            Selected = selected;
+        }
+
+        #endregion
+
+        #region Properties
+
+        private bool _selected = false;
+        /// <summary>
+        /// 是否选中
+        /// </summary>
+        [Category(CategoryName.OPTIONS)]
+        [Description("是否选中")]
+        [DefaultValue(false)]
+        [NotifyParentProperty(true)]
+        public bool Selected
+        {
+            get
+            {
+                return _selected;
+            }
+            set
+            {
+                _selected = value;
+            }
+        }
+
+        private string _text = String.Empty;
+        /// <summary>
+        /// 显示的文本
+        /// </summary>
+        [Category(CategoryName.OPTIONS)]
+        [DefaultValue("")]
+        [Description("显示的文本")]
+        [NotifyParentProperty(true)]
+        public string Text
+        {
+            get
+            {
+                return _text;
+            }
+            set
+            {
+                _text = value;
+            }
+        }
+
+        private string _value = String.Empty;
+        /// <summary>
+        /// 值
+        /// </summary>
+        [Category(CategoryName.OPTIONS)]
+        [DefaultValue("")]
+        [Description("值")]
+        [NotifyParentProperty(true)]
+        public string Value
+        {
+            get
+            {
+                return _value;
+            }
+            set
+            {
+                _value = value;
+            }
+        }
+
+        #endregion
+
+    }
+}

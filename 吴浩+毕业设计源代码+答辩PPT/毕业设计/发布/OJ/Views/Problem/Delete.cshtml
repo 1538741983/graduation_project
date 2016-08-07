@@ -1,0 +1,99 @@
+﻿@model OJ.OJService.ProblemDO
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>ProblemDO</legend>
+
+    <div class="display-label">title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">describe</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.describe)
+    </div>
+
+    <div class="display-label">input</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.input)
+    </div>
+
+    <div class="display-label">output</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.output)
+    </div>
+
+    <div class="display-label">sample_input</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sample_input)
+    </div>
+
+    <div class="display-label">sample_output</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sample_output)
+    </div>
+
+    <div class="display-label">fg_special</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fg_special)
+    </div>
+
+    <div class="display-label">hint</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.hint)
+    </div>
+
+    <div class="display-label">source</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.source)
+    </div>
+
+    <div class="display-label">in_date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.in_date)
+    </div>
+
+    <div class="display-label">time_limit</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.time_limit)
+    </div>
+
+    <div class="display-label">memory_limit</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.memory_limit)
+    </div>
+
+    <div class="display-label">defunct</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.defunct)
+    </div>
+
+    <div class="display-label">accepted</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.accepted)
+    </div>
+
+    <div class="display-label">submit</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.submit)
+    </div>
+
+    <div class="display-label">solved</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.solved)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" />
+        |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

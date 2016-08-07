@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tree>
+  <!--<TreeNode Text="OJ管理">-->
+    <TreeNode Text="用户管理"  Target="mainframe" NavigateUrl="./temp/UserManage.aspx" >
+    </TreeNode>
+    <TreeNode Text="用户组管理"  Target="mainframe" NavigateUrl="./temp/UserGroupManage.aspx">
+    </TreeNode>
+    <TreeNode Text="权限管理"  Target="mainframe" NavigateUrl="./temp/RoleManage.aspx">
+    </TreeNode>
+
+    <TreeNode Text="新闻管理"  Target="mainframe" NavigateUrl="./temp/UserManage.aspx" >
+    </TreeNode>
+    <TreeNode Text="问题管理"  Target="mainframe" NavigateUrl="./temp/UserGroupManage.aspx">
+    </TreeNode>
+    <TreeNode Text="竞赛和作业管理"  Target="mainframe" NavigateUrl="./temp/RoleManage.aspx">
+    </TreeNode>
+    <TreeNode Text="比赛队账号生成器"  Target="mainframe" NavigateUrl="./temp/UserManage.aspx" >
+    </TreeNode>
+    <TreeNode Text="公告管理"  Target="mainframe" NavigateUrl="./temp/UserGroupManage.aspx">
+    </TreeNode>
+    <TreeNode Text="题目重判"  Target="mainframe" NavigateUrl="./temp/RoleManage.aspx">
+    </TreeNode>
+    <TreeNode Text="转移源码"  Target="mainframe" NavigateUrl="./temp/UserManage.aspx" >
+    </TreeNode>
+    <TreeNode Text="导入导出问题"  Target="mainframe" NavigateUrl="./temp/UserGroupManage.aspx">
+    </TreeNode>
+    <TreeNode Text="更新数据库"  Target="mainframe" NavigateUrl="./temp/RoleManage.aspx">
+    </TreeNode>
+  <!--</TreeNode>-->
+</Tree>

@@ -1,0 +1,84 @@
+.wrap
+{
+	position: relative;
+	height: 102px;
+	background: url(../images/admin_tbg.png) repeat-x left top;
+}
+.logos
+{
+	bottom: 45px;
+	color: #FFFFFF;
+	font-size: 25px;
+	font-weight: bold;
+	left: 10px;
+	position: absolute;
+	width: 300px;
+}
+.menu
+{
+	position: absolute;
+	right: 80px;
+	top: 36px;
+}
+.menu ul
+{
+    padding: 0;
+    margin: 0;
+}
+.menu li
+{
+	float: left;
+	list-style: none;
+	font-size: 14px;
+	height: 39px;
+	line-height: 39px;
+}
+.menu a
+{
+	text-decoration: none;
+	display: block;
+}
+
+.menu li a
+{
+	display: block;
+	background: url(../images/menu.png) no-repeat right -117px;
+	padding-right: 17px;
+	text-decoration: none;
+	color: #fff;
+}
+.menu li.selected a
+{
+	background-position: right -39px;
+	color: #0A6697;
+	font-weight: bold;
+}
+
+.menu span
+{
+	background: url(../images/menu.png) no-repeat 0 -78px;
+	display: block;
+	padding-left: 17px;
+}
+.menu li.selected span
+{
+	background-position: left top;
+}
+
+.member
+{
+	position: absolute;
+	left: 12px;
+	bottom: 5px;
+	color: #077FBC;
+}
+
+.exit
+{
+	padding-left: 20px;
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+	background: url(../images/t.png) no-repeat;
+	color: #077FBC;
+}

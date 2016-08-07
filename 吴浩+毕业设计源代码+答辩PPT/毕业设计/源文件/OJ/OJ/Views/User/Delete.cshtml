@@ -1,0 +1,78 @@
+﻿@model OJ.Domain.User
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>User</legend>
+
+    <div class="display-label">nickName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nickName)
+    </div>
+
+    <div class="display-label">password</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+
+    <div class="display-label">email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">submit</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.submit)
+    </div>
+
+    <div class="display-label">solved</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.solved)
+    </div>
+
+    <div class="display-label">regTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.regTime)
+    </div>
+
+    <div class="display-label">accessTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.accessTime)
+    </div>
+
+    <div class="display-label">regIp</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.regIp)
+    </div>
+
+    <div class="display-label">accessIp</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.accessIp)
+    </div>
+
+    <div class="display-label">defunct</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.defunct)
+    </div>
+
+    <div class="display-label">school</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.school)
+    </div>
+
+    <div class="display-label">language</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.language.name)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

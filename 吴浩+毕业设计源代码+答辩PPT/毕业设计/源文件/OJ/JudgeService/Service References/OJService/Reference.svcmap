@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e51035f6-d22a-4524-8651-3a5e45207e9b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54799/OJService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OJService1.disco" MetadataType="Disco" ID="0854ec4d-a6c9-4721-a8b3-406d7a5298d2" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?disco" />
+    <MetadataFile FileName="OJService7.xsd" MetadataType="Schema" ID="c64a1ee5-6fd7-49b5-96a2-ab4f8a9b8f11" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OJService71.xsd" MetadataType="Schema" ID="6fddeb27-8566-4181-be41-1748196f4cab" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OJService72.xsd" MetadataType="Schema" ID="9672368f-6a47-4538-9ba5-8967e9531aa7" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OJService73.xsd" MetadataType="Schema" ID="19366314-3ef8-4c53-aaab-8e61a45c475b" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OJService74.xsd" MetadataType="Schema" ID="c8904fc9-4adf-41b9-8dd0-f4617daa3407" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?xsd=xsd5" />
+    <MetadataFile FileName="OJService75.xsd" MetadataType="Schema" ID="cd9adfe4-7dce-4b15-ac65-5ca51b9b409b" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?xsd=xsd4" />
+    <MetadataFile FileName="OJService1.wsdl" MetadataType="Wsdl" ID="b1530c4e-bcf2-4ebe-ad85-ccc00e1df5b1" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?wsdl" />
+    <MetadataFile FileName="OJService76.xsd" MetadataType="Schema" ID="da45f915-bf47-4909-901b-7fce0703217f" SourceId="1" SourceUrl="http://localhost:54799/OJService.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,74 @@
+﻿@using OJ.OJService
+@model OJ.OJService.ProblemPageList
+@{
+    ViewBag.Title = "题目列表";
+}
+
+
+<!--Center-->
+<div class="col-sm-10">
+    <div class="text-center">
+        <ul class="pagination pagination-centered text-center" style="margin: 0">
+            <li class="previous">
+                @Html.ActionLink("上一页", "ProblemList", "Problem", new { id = Model.CurrentPage - 1 }, Model.CurrentPage == 1 ? new { onclick = "return false" } : null)
+            </li>
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li @(i == Model.CurrentPage ? "class = \"active\"" : "")>
+                    @Html.ActionLink(i.ToString(), "ProblemList", "Problem", new { id = i }, null)
+                </li>
+            }
+
+            <li class="next">
+                @Html.ActionLink("下一页", "ProblemList", "Problem", new { id = Model.CurrentPage + 1 }, Model.CurrentPage == Model.TotalPages ? new { onclick = "return false" } : null)
+            </li>
+        </ul>
+    </div>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th style="width: 50px">题号</th>
+                <th style="width: 50px">难度</th>
+                <th style="width: 400px">标题</th>
+                <th>通过率</th>
+                <th style="width: 50px">标程</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.DataList != null)
+            {
+                foreach (ProblemDO problem in Model.DataList)
+                {
+                <tr>
+                    <td>@problem.Id</td>
+                    <td>@problem.Difficulty</td>
+                    <td>@Html.ActionLink(problem.Title, "ProblemDetails", "Problem", new { problem.Id }, null)</td>
+                    <td>@string.Format("{0} % ({1}/{2})", 0, problem.Accepted, problem.Submit)</td>
+                    <td></td>
+                </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+    <div class="text-center">
+        <ul class="pagination pagination-centered text-center">
+            <li class="previous">
+                @Html.ActionLink("上一页", "ProblemList", "Problem", new { id = Model.CurrentPage - 1 }, Model.CurrentPage == 1 ? new { onclick = "return false" } : null)
+            </li>
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li @(i == Model.CurrentPage ? "class = \"active\"" : "")>
+                    @Html.ActionLink(i.ToString(), "ProblemList", "Problem", new { id = i }, null)
+                </li>
+            }
+
+            <li class="next">
+                @Html.ActionLink("下一页", "ProblemList", "Problem", new { id = Model.CurrentPage + 1 }, Model.CurrentPage == Model.TotalPages ? new { onclick = "return false" } : null)
+            </li>
+        </ul>
+    </div>
+</div>
